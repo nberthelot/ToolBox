@@ -15,10 +15,13 @@
 		226F3DC3E70AA418D46E46B3D98BC002 /* Int+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47553FCEA1A27DAE1C42DA7E39A62D /* Int+Tools.swift */; };
 		24503C37C9CEBD53CE0726B00154F1C4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4D5FFA0429090C62D4C0B46D4FC4 /* UIViewController+Alert.swift */; };
 		2CC6A6568C6760110850783071B47C8C /* TBStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B131108B1C9394924D3F5231A2189D /* TBStack.swift */; };
-		2EC7843917F38A090B907FA439887BA7 /* MGOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AAE260F6B31B3C08F9953660DE9057 /* MGOS.swift */; };
+		2EC7843917F38A090B907FA439887BA7 /* TBOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AAE260F6B31B3C08F9953660DE9057 /* TBOS.swift */; };
 		2F09BC5B46ED0155617B7E40E4AD4F5A /* TBPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE375AFAE3CDCB4D36FCB3E317ABEDA /* TBPlayerView.swift */; };
 		3162D5CA561364A7CB3B623409B2A500 /* ISO8601+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DB748A19CE281CCACBAE4FDC5609FB /* ISO8601+Tools.swift */; };
 		37A8550E030B7E097A3CB3F2B81916F2 /* TBReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */; };
+		37CA5CF2213671FC00A2D54E /* UIViewController+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CEF213671FC00A2D54E /* UIViewController+Router.swift */; };
+		37CA5CF3213671FC00A2D54E /* TBRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CF0213671FC00A2D54E /* TBRoutable.swift */; };
+		37CA5CF4213671FC00A2D54E /* TBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CF1213671FC00A2D54E /* TBRouter.swift */; };
 		3DE041961E25C38B10910D8B02ECE4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		3F556F941306B7AB8163380A20716AC0 /* Array+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E17C84ABE9BBDFC5F4C77CA38B94B9 /* Array+Tools.swift */; };
 		483023BB8A421239F2A3BE8C269911C9 /* TBMultiGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CBA0877AF21839C7D18FD8A5BB9C04 /* TBMultiGradientView.swift */; };
@@ -93,26 +96,29 @@
 		196ADF22BA4CA217A0E3C3A99042FA2B /* TBVideoLooperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBVideoLooperView.swift; sourceTree = "<group>"; };
 		1AED5AC2A8095757F7EBA3C45EC4EEDB /* Pods-ToolBox_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToolBox_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1D0C7E54A0397E657B778BBC9C8F8947 /* Pods-ToolBox_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToolBox_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		225F9649A5558A41F069547EE9925CF4 /* ToolBox.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ToolBox.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		225F9649A5558A41F069547EE9925CF4 /* ToolBox.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ToolBox.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		22FDA9E6EA2E80D122E9632CBEEC9EBA /* Pods-ToolBox_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		25EDFCD6402763742103B19890F6929F /* Pods_ToolBox_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToolBox_Example.framework; path = "Pods-ToolBox_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25EDFCD6402763742103B19890F6929F /* Pods_ToolBox_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBox_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2650CC5CCF08ED40788BAF53A57B935C /* Pods-ToolBox_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToolBox_Tests-resources.sh"; sourceTree = "<group>"; };
 		27BF84A283EFCAF17EC881AB4546E476 /* TBGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBGradientView.swift; sourceTree = "<group>"; };
 		2DF06A0A77BC1E779CC71681E40C721C /* TBShimmeringViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBShimmeringViewProtocol.swift; sourceTree = "<group>"; };
 		2F472886DD426EDA0397472C16CDB89A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		358C02A7924CE24FD1EADCE590E205FE /* Pods-ToolBox_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToolBox_Tests-umbrella.h"; sourceTree = "<group>"; };
 		365CFACAAEA8538E1AA2647AEE25D55E /* Pods-ToolBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37CA5CEF213671FC00A2D54E /* UIViewController+Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Router.swift"; sourceTree = "<group>"; };
+		37CA5CF0213671FC00A2D54E /* TBRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBRoutable.swift; sourceTree = "<group>"; };
+		37CA5CF1213671FC00A2D54E /* TBRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBRouter.swift; sourceTree = "<group>"; };
 		381E1B0FB9F4721C2B195BF6A715255C /* TBNavigationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBNavigationProtocol.swift; sourceTree = "<group>"; };
 		3975003108794F4779BBCB0C149F1718 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		3C16439C4DF66534DDABDC822189A396 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		3C458DE5A5349A2CEB5BF51FA9A77233 /* Date+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Tools.swift"; sourceTree = "<group>"; };
 		3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBReusable.swift; sourceTree = "<group>"; };
 		3E1DA3AC5C80B75CFE6B01EBDEA452D7 /* UINavigationController+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Tools.swift"; sourceTree = "<group>"; };
-		417DFEDBADC0CCDD9A9BED09F52050E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		417DFEDBADC0CCDD9A9BED09F52050E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		455727CB0B10F47B6F5B9028CA4F7AB0 /* TBKeyboardNotificationsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBKeyboardNotificationsProtocol.swift; sourceTree = "<group>"; };
 		459E6937DA71D1B3D3187F959B24760F /* Float+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Float+Tools.swift"; sourceTree = "<group>"; };
 		46CA9AF59865F5E9A45D5A8D88241FCE /* TBPagerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPagerViewDelegate.swift; sourceTree = "<group>"; };
-		4877AA3F6216EED1E81B063954262B10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4877AA3F6216EED1E81B063954262B10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBRotationWithFadeAnimator.swift; sourceTree = "<group>"; };
 		4CF85F8B13916D63984FE27B28998E4F /* ToolBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ToolBox.modulemap; sourceTree = "<group>"; };
 		4FC6227BB6C68A5F90710E8B2E50356F /* Pods-ToolBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +128,7 @@
 		57CBA0877AF21839C7D18FD8A5BB9C04 /* TBMultiGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBMultiGradientView.swift; sourceTree = "<group>"; };
 		5F6979C097FF2DE4ADED1811F406992F /* UIFont+DynamicLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+DynamicLoading.swift"; sourceTree = "<group>"; };
 		5F8970AB8E3162FFB519AE4DFE820FD9 /* TBGradientButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBGradientButton.swift; sourceTree = "<group>"; };
-		60CD057A5825320213F0834147A5B210 /* ToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ToolBox.framework; path = ToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CD057A5825320213F0834147A5B210 /* ToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B4CB54B3D94A72D2A0971E016F03E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		67CC7B073D45DDC6C78498E1A7396062 /* TBOS+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TBOS+iOS.swift"; sourceTree = "<group>"; };
@@ -142,7 +148,7 @@
 		8F65766EE6E3FD15071B02B96746188A /* UIScreen+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScreen+Tools.swift"; sourceTree = "<group>"; };
 		9016E82233719019F2ED918E70D262F6 /* TBFeatureFlag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBFeatureFlag.swift; sourceTree = "<group>"; };
 		92C0D8316269A0CADF895E28CAD2D63F /* ToolBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ToolBox-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94975C2F1755C6EE98017F1831D57E0C /* Pods-ToolBox_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ToolBox_Example.modulemap"; sourceTree = "<group>"; };
 		969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBFadeWithBlurAnimator.swift; sourceTree = "<group>"; };
 		9BEA50874EA01F8A09D2F0E0E116CCA5 /* ToolBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ToolBox.xcconfig; sourceTree = "<group>"; };
@@ -153,10 +159,10 @@
 		B9683A10A4F7E00E520C854F5D4924B5 /* CMTime+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CMTime+Tools.swift"; sourceTree = "<group>"; };
 		BEB1BA13A4B5A015DE8AC019552EE6F2 /* String+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
 		C2003E6A0DDF598FEE12036E3CFCA853 /* Pods-ToolBox_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToolBox_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C5AAE260F6B31B3C08F9953660DE9057 /* MGOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGOS.swift; sourceTree = "<group>"; };
+		C5AAE260F6B31B3C08F9953660DE9057 /* TBOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBOS.swift; sourceTree = "<group>"; };
 		CB959CAA27398E6A7CF3694026B67E15 /* MGLoggerService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerService.swift; sourceTree = "<group>"; };
 		CC2F0A3B5D7F2A2785ED64EB9157D408 /* Pods-ToolBox_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ToolBox_Tests-dummy.m"; sourceTree = "<group>"; };
-		D17A9BF49BC7A96B8AFDC9C1BE7F1738 /* Pods_ToolBox_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ToolBox_Tests.framework; path = "Pods-ToolBox_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17A9BF49BC7A96B8AFDC9C1BE7F1738 /* Pods_ToolBox_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBox_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A2E5039D768E49DCFF42BCDFC98A01 /* TBPrint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPrint.swift; sourceTree = "<group>"; };
 		DB87963E0A9943B9DC021070A5AF4351 /* UIView+NSLayoutAnchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutAnchor.swift"; sourceTree = "<group>"; };
 		DE47553FCEA1A27DAE1C42DA7E39A62D /* Int+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+Tools.swift"; sourceTree = "<group>"; };
@@ -207,7 +213,6 @@
 				46CA9AF59865F5E9A45D5A8D88241FCE /* TBPagerViewDelegate.swift */,
 				323656FD6CBC1A9CB3E7BF70A74AB2D5 /* Transformers */,
 			);
-			name = Pager;
 			path = Pager;
 			sourceTree = "<group>";
 		};
@@ -235,7 +240,6 @@
 				72EE25DB9DC698A64558F4E5F508D6C7 /* TBServiceProtocol.swift */,
 				C9C3C1C820EDD1D495CA30514A2B7D76 /* Logger */,
 			);
-			name = Service;
 			path = Service;
 			sourceTree = "<group>";
 		};
@@ -244,7 +248,6 @@
 			children = (
 				7B7CF4799BBA30A6B8EBF61D84DA4CE8 /* TBPagerViewTransformer.swift */,
 			);
-			name = Transformers;
 			path = Transformers;
 			sourceTree = "<group>";
 		};
@@ -255,8 +258,17 @@
 				969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */,
 				4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */,
 			);
-			name = Animators;
 			path = Animators;
+			sourceTree = "<group>";
+		};
+		37CA5CEE213671E800A2D54E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				37CA5CF0213671FC00A2D54E /* TBRoutable.swift */,
+				37CA5CF1213671FC00A2D54E /* TBRouter.swift */,
+				37CA5CEF213671FC00A2D54E /* UIViewController+Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		3900174A6711E4602A4826270310CAB9 /* Protocols */ = {
@@ -267,7 +279,6 @@
 				3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */,
 				2DF06A0A77BC1E779CC71681E40C721C /* TBShimmeringViewProtocol.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -289,7 +300,6 @@
 			children = (
 				7768C263C341592B5C3BB477FC78DD70 /* TBPresentationType.swift */,
 			);
-			name = Enums;
 			path = Enums;
 			sourceTree = "<group>";
 		};
@@ -314,7 +324,6 @@
 				7A77E88A7C1000ED51095ECF36D00D03 /* UIView+Animations.swift */,
 				844A4D5FFA0429090C62D4C0B46D4FC4 /* UIViewController+Alert.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -363,21 +372,20 @@
 				FAE375AFAE3CDCB4D36FCB3E317ABEDA /* TBPlayerView.swift */,
 				196ADF22BA4CA217A0E3C3A99042FA2B /* TBVideoLooperView.swift */,
 			);
-			name = Videos;
 			path = Videos;
 			sourceTree = "<group>";
 		};
 		AE22EA4424727DB318184AE0F77E09E8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C5AAE260F6B31B3C08F9953660DE9057 /* MGOS.swift */,
+				C5AAE260F6B31B3C08F9953660DE9057 /* TBOS.swift */,
 				740560B0B857EBD22D0A03E7B67924E2 /* TBContainer.swift */,
 				D6A2E5039D768E49DCFF42BCDFC98A01 /* TBPrint.swift */,
 				00B131108B1C9394924D3F5231A2189D /* TBStack.swift */,
+				37CA5CEE213671E800A2D54E /* Router */,
 				F7D253FE44BC2017AC0FAD14A9BC0334 /* Feature */,
 				B28E2E0679A6711B362526A74DD4D8C3 /* Services */,
 			);
-			name = Tools;
 			path = Tools;
 			sourceTree = "<group>";
 		};
@@ -387,7 +395,6 @@
 				6D33EB40A0A68A4F9B775DF10E871D0E /* TBServices.swift */,
 				268EA11BA466DDCB78D8216DB3906408 /* Service */,
 			);
-			name = Services;
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -409,7 +416,6 @@
 				F1DB748A19CE281CCACBAE4FDC5609FB /* ISO8601+Tools.swift */,
 				BEB1BA13A4B5A015DE8AC019552EE6F2 /* String+Tools.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -430,7 +436,6 @@
 				CB959CAA27398E6A7CF3694026B67E15 /* MGLoggerService.swift */,
 				A26F49AAEC5A4D904228E969315128FF /* MGLoggerServiceProtocol.swift */,
 			);
-			name = Logger;
 			path = Logger;
 			sourceTree = "<group>";
 		};
@@ -480,7 +485,6 @@
 				381E1B0FB9F4721C2B195BF6A715255C /* TBNavigationProtocol.swift */,
 				E42AE9265B2006DB2F59E905FC0C4A24 /* TBNibLoadable.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -502,7 +506,6 @@
 				DB87963E0A9943B9DC021070A5AF4351 /* UIView+NSLayoutAnchor.swift */,
 				F68AE840DEA51974B52BCA5F763F8725 /* UIViewController+Tools.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -511,7 +514,6 @@
 			children = (
 				67CC7B073D45DDC6C78498E1A7396062 /* TBOS+iOS.swift */,
 			);
-			name = Tools;
 			path = Tools;
 			sourceTree = "<group>";
 		};
@@ -535,7 +537,6 @@
 				9016E82233719019F2ED918E70D262F6 /* TBFeatureFlag.swift */,
 				A730E4F96E4FE3257B41D7B27CDF4CA9 /* TBFeatureFlags.swift */,
 			);
-			name = Feature;
 			path = Feature;
 			sourceTree = "<group>";
 		};
@@ -544,7 +545,6 @@
 			children = (
 				69C8F87019FD3CBFACE0C52C87B13CB0 /* TBTabbarViewController.swift */,
 			);
-			name = ViewControllers;
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
@@ -559,7 +559,6 @@
 				0BE58F72453009D7CE491B16055D765C /* Pager */,
 				94C7AB2A5060B55044BCD3EBAC7500D7 /* Videos */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -704,7 +703,7 @@
 				3162D5CA561364A7CB3B623409B2A500 /* ISO8601+Tools.swift in Sources */,
 				B90A0F6CCAAE0B75C413080BB5C28C0B /* MGLoggerService.swift in Sources */,
 				60A4A4DCAB3AAC1587EE80C750CCF057 /* MGLoggerServiceProtocol.swift in Sources */,
-				2EC7843917F38A090B907FA439887BA7 /* MGOS.swift in Sources */,
+				2EC7843917F38A090B907FA439887BA7 /* TBOS.swift in Sources */,
 				8591A37DDA3B989BD858E742B82CCE8E /* String+Tools.swift in Sources */,
 				6073866298DD86A6B55600C95D769C17 /* TBCellProtocol.swift in Sources */,
 				EFB947D2156D388EE855BC1E0617FA70 /* TBContainer.swift in Sources */,
@@ -724,14 +723,17 @@
 				1B0E30AB163B0693F5420D7BF6297DC3 /* TBPagerViewDelegate.swift in Sources */,
 				9D6FEEA469E7E320D95E6685F84AD7F4 /* TBPagerViewTransformer.swift in Sources */,
 				2F09BC5B46ED0155617B7E40E4AD4F5A /* TBPlayerView.swift in Sources */,
+				37CA5CF2213671FC00A2D54E /* UIViewController+Router.swift in Sources */,
 				FBCDF40CC3F57FB1A9F1BA98B91F7AAF /* TBPresentationType.swift in Sources */,
 				BC1D3D156329091E30054C2D0E786668 /* TBPrint.swift in Sources */,
 				37A8550E030B7E097A3CB3F2B81916F2 /* TBReusable.swift in Sources */,
 				6369EB4BF1461375FF4C90F0FD7DB403 /* TBRotationWithFadeAnimator.swift in Sources */,
+				37CA5CF4213671FC00A2D54E /* TBRouter.swift in Sources */,
 				62E12ABA8F8C8B93B178AACDFE6E7AF1 /* TBServiceProtocol.swift in Sources */,
 				8ECE0314A635628DBD0CDAC779386427 /* TBServices.swift in Sources */,
 				AF47096693F10E532ED0F7CC58FDB5C8 /* TBShimmeringImageView.swift in Sources */,
 				D3EAFD1D42170484964B8B1203393310 /* TBShimmeringViewProtocol.swift in Sources */,
+				37CA5CF3213671FC00A2D54E /* TBRoutable.swift in Sources */,
 				2CC6A6568C6760110850783071B47C8C /* TBStack.swift in Sources */,
 				C88B2C9B66347F8D708B0BFD5982DB34 /* TBTabbarViewController.swift in Sources */,
 				1ADB8C3014A64E4455870D8C045CFEED /* TBVideoLooperView.swift in Sources */,
