@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RLRouter {
+public struct TBRouter {
     
   public static func addRoute(_ route: String, routableClass: TBRoutable.Type) {
     TBContainer.add(routableClass, for: route)
@@ -25,21 +25,21 @@ public struct RLRouter {
 }
 
 // MARK: - CONFIGURATION
-extension RLRouter {
+extension TBRouter {
   
   @discardableResult
   public static func loadRoutes(from url: URL, asynchronous: Bool = false, completion: ((Bool) -> Void)? = nil) -> Bool {
     if asynchronous == false {
       let data = try? Data(contentsOf: url)
       let json = try? JSONSerialization.jsonObject(with: data!)
-      return RLRouter.addRoutes(from:  json as? [String: [String: Any]])
+      return TBRouter.addRoutes(from:  json as? [String: [String: Any]])
     }
     else {
       DispatchQueue.global(qos: .background).async {
         let data = try? Data(contentsOf: url)
         let json = try? JSONSerialization.jsonObject(with: data!)
         DispatchQueue.main.async {
-          completion?(RLRouter.addRoutes(from:  json as? [String: [String: Any]]))
+          completion?(TBRouter.addRoutes(from:  json as? [String: [String: Any]]))
         }
       }
       return true
@@ -53,12 +53,15 @@ extension RLRouter {
       guard let className = infos["class"] else {
         return false
       }
-      
-      if let routableClass = NSClassFromString("\(className)") as? TBRoutable.Type {
-        RLRouter.addRoute(route, routableClass: routableClass)
+      let bundleName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? ""
+      if let routableClass = NSClassFromString("\(bundleName).\(className)") as? TBRoutable.Type {
+        TBRouter.addRoute(route, routableClass: routableClass)
+      }
+      else if let routableClass = NSClassFromString("\(className)") as? TBRoutable.Type {
+        TBRouter.addRoute(route, routableClass: routableClass)
       }
       else {
-        tbPrint("[RLROUTER] Fail to add route \(route) with infos: \(infos)", category: .ui)
+        tbPrint("[TBROUTER] Fail to add route \(route) with infos: \(infos)", category: .ui)
       }
     }
     return true

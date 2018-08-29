@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 private class TabbarItem {
+  
   var tabbarItemView:  UIView
   var tabbarButton: UIButton
   var keepControllerInMemory: Bool
@@ -28,6 +29,7 @@ open class TBTabbarViewController: UIViewController {
   open var heightTabbar: CGFloat { return 49 }
   open var startingTabIndex: Int { return 0 }
   open var controllersCount: Int { return 0 }
+  
   public fileprivate(set) var currentTabControllerIndex: Int = -1 // startingValue
   public var containerView = UIView()
   public var tabbarView = UIView()
@@ -59,8 +61,8 @@ open class TBTabbarViewController: UIViewController {
     return true
   }
   
-  open func didSelect(itemView: UIView, at index: Int) { }
-  open func didDeselect(itemView: UIView, at index: Int) { }
+  open func didSelect(itemView: UIView, with button: UIButton, at index: Int) { }
+  open func  didDeselect(itemView: UIView, with button: UIButton, at index: Int) { }
   open func canSelect(itemAt index: Int) -> Bool { return true }
   open func prepare(itemView: UIView, with button: UIButton, at index: Int) { }
   
@@ -186,7 +188,7 @@ extension TBTabbarViewController {
   
   public func removeTabbarItem(at index: Int) {
     guard index >= 0 && index <= tabbarItems.count, let tabbarItem = tabbarItem(at: index) else { return }
-    didDeselect(itemView: tabbarItem.tabbarItemView, at: index)
+    didDeselect(itemView: tabbarItem.tabbarItemView, with: tabbarItem.tabbarButton, at: index)
     tabbarItems.remove(at: index)
     stackView.removeArrangedSubview(tabbarItem.tabbarItemView)
     tabbarItem.tabbarItemView.removeFromSuperview()
@@ -243,13 +245,13 @@ extension TBTabbarViewController {
     let currentTabbarItem = self.tabbarItem(at: currentTabControllerIndex)
     if let item = currentTabbarItem {
       item.tabbarButton.isSelected = false
-      didDeselect(itemView: item.tabbarItemView, at: currentTabControllerIndex)
+      didDeselect(itemView: item.tabbarItemView, with: tabbarItem.tabbarButton, at: currentTabControllerIndex)
     }
 
     tabbarItem.controller = controller
     add(controller, inContainerView: containerView)
     tabbarItem.tabbarButton.isSelected = true
-    didSelect(itemView: tabbarItem.tabbarItemView, at: index)
+    didSelect(itemView: tabbarItem.tabbarItemView,with: tabbarItem.tabbarButton, at: index)
     let oldIndex = currentTabControllerIndex
     currentTabControllerIndex = index
  

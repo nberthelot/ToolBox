@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		21091D51F230CEEB76D73AEA /* Pods_ToolBox_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E6F01EBB0E89E78744CF1 /* Pods_ToolBox_Example.framework */; };
+		37CA5CFB21367C0700A2D54E /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */; };
+		37CA5CFE21367C8300A2D54E /* ExampleTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */; };
+		37CA5D0021367DA400A2D54E /* ExampleTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */; };
+		37CA5D042136818800A2D54E /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CA5D032136818800A2D54E /* Routes.json */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* RootViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -29,10 +33,14 @@
 
 /* Begin PBXFileReference section */
 		1A8BB8547535633E42CA012C /* Pods-ToolBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBox_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBox_Tests/Pods-ToolBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTitleTableViewCell.swift; sourceTree = "<group>"; };
+		37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTitleTableViewCell.xib; sourceTree = "<group>"; };
+		37CA5D032136818800A2D54E /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ToolBox_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolBox_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +77,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37CA5CF921367C0700A2D54E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		37CA5CFC21367C4700A2D54E /* ReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */,
+				37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */,
+			);
+			path = ReusableCell;
+			sourceTree = "<group>";
+		};
+		37CA5D012136816800A2D54E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				37CA5D032136818800A2D54E /* Routes.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +127,12 @@
 		607FACD21AFB9204008FA782 /* Example for ToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				37CA5D012136816800A2D54E /* Assets */,
+				607FACD71AFB9204008FA782 /* RootViewController.swift */,
+				37CA5CF921367C0700A2D54E /* Tabbar */,
+				37CA5CFC21367C4700A2D54E /* ReusableCell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -248,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				37CA5D042136818800A2D54E /* Routes.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				37CA5D0021367DA400A2D54E /* ExampleTitleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* RootViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				37CA5CFB21367C0700A2D54E /* TabbarViewController.swift in Sources */,
+				37CA5CFE21367C8300A2D54E /* ExampleTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
