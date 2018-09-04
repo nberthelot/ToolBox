@@ -9,18 +9,19 @@
 import UIKit
 import ToolBox
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, TBRoutable {
   
   @IBOutlet weak var tableView: UITableView!
+  
+  public static func loadController(with data: Any?, for route: String) -> UIViewController? {
+    return self.init()
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     prepare()
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
   
 }
 

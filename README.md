@@ -35,6 +35,57 @@ pod 'ToolBox'
 
 ##  Router
 
+Router will help you to manage routes and navigation throw the application
+
+A route is a class (in most of the cases a ViewController) witch implements TBRoutable protocol
+```swift
+public protocol TBRoutable: class {
+static func loadController(with data: Any?, for route: String) -> UIViewController?
+}
+```
+Example:
+```swift
+class HomeViewController: UIViewController, TBRoutable {
+public static func loadController(with data: Any?, for route: String) -> UIViewController? {
+//You can add some logic like data validation
+return self.init()
+}
+}
+```
+
+Routes can be added manually 
+
+```swift
+TBRouter.addRoute("home", routableClass: HomeViewController.self)
+```
+Or with local or remote router file (JSON)
+*Routes.json*
+```json
+{
+"home": {
+"class" : "HomeViewController"
+},
+}
+```
+
+```swift
+if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
+TBRouter.loadRoutes(from: url)
+}
+```
+
+To perform a route just call from UIViewController:
+```swift
+x_performRoute("home", presentationType: .push)
+//or
+x_performRoute("home", presentationType: .modal, data: someData, animated: true)
+```
+
+Or just get the route's controller and perform a presentation manually:
+```swift
+let homeController = TBRouter.route("home", with: someData)
+```
+
 ## Services Container
 TODO
 

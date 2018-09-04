@@ -8,7 +8,6 @@
 import Foundation
 
 public enum TBPresentationType {
-    case push
-    case modal
-    case auto
+  case push
+  case modal
 }

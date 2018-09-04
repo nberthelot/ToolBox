@@ -19,7 +19,6 @@
 		2E756F4710BA64CBBFA2C2257D0FFFDE /* TBPresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C7417A74C7DA7F5CAD7132EF26AE /* TBPresentationType.swift */; };
 		31F9890003851170150B654421F28343 /* TBOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1D8125B165229CD682616B6CB949E /* TBOS.swift */; };
 		343B7511AB6293F483E602A98630360C /* ISO8601+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E774E9712C5E03A9F183BD88C14EF7 /* ISO8601+Tools.swift */; };
-		38FB3CAC903C6F1FFBE82F057F606835 /* TBNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381E1B0FB9F4721C2B195BF6A715255C /* TBNavigationProtocol.swift */; };
 		3D21BFB959D94D489883D9273185262C /* TBCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABB5E52BAB0EB35A48E21552787B3F /* TBCellProtocol.swift */; };
 		3DD3836D70C2CEAA7D8C0AA0DE23AC49 /* TBVideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196ADF22BA4CA217A0E3C3A99042FA2B /* TBVideoLooperView.swift */; };
 		3DE041961E25C38B10910D8B02ECE4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -105,7 +104,6 @@
 		2F472886DD426EDA0397472C16CDB89A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		358C02A7924CE24FD1EADCE590E205FE /* Pods-ToolBox_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToolBox_Tests-umbrella.h"; sourceTree = "<group>"; };
 		365CFACAAEA8538E1AA2647AEE25D55E /* Pods-ToolBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		381E1B0FB9F4721C2B195BF6A715255C /* TBNavigationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBNavigationProtocol.swift; sourceTree = "<group>"; };
 		3975003108794F4779BBCB0C149F1718 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		3A3C7876F41C3C7F65EA4B9A5CFA576F /* MGLoggerService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerService.swift; sourceTree = "<group>"; };
 		3C16439C4DF66534DDABDC822189A396 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
@@ -488,7 +486,6 @@
 		DFDCA28759F41A16305B74CB9BA7389A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				381E1B0FB9F4721C2B195BF6A715255C /* TBNavigationProtocol.swift */,
 				E42AE9265B2006DB2F59E905FC0C4A24 /* TBNibLoadable.swift */,
 			);
 			path = Protocols;
@@ -711,7 +708,6 @@
 				EFCF1B0CCD93A611A740587A6205C41D /* TBGradientView.swift in Sources */,
 				C368B57A8939FB1F54E509005327C65C /* TBKeyboardNotificationsProtocol.swift in Sources */,
 				1C97C60443653916CCA4A1F888524F5C /* TBMultiGradientView.swift in Sources */,
-				38FB3CAC903C6F1FFBE82F057F606835 /* TBNavigationProtocol.swift in Sources */,
 				21957C9EF6A65F4F627310B2E2A585B2 /* TBNibLoadable.swift in Sources */,
 				AB818D05B03AE36023140B2A983E901F /* TBOS+iOS.swift in Sources */,
 				31F9890003851170150B654421F28343 /* TBOS.swift in Sources */,

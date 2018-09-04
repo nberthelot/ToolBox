@@ -8,7 +8,7 @@
 import Foundation
 
 public struct TBRouter {
-    
+  
   public static func addRoute(_ route: String, routableClass: TBRoutable.Type) {
     TBContainer.add(routableClass, for: route)
   }
@@ -21,7 +21,7 @@ public struct TBRouter {
     let routable: TBRoutable.Type? = TBContainer.getValue(for: route)
     return routable?.loadController(with: data, for: route)
   }
-
+  
 }
 
 // MARK: - CONFIGURATION

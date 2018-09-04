@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public extension UIViewController {
   
   public func x_add(_ childViewController: UIViewController, inContainerView container: UIView) {
@@ -19,9 +18,7 @@ public extension UIViewController {
   }
   
   public var x_isChildviewController: Bool {
-    guard let parent = parent else {
-      return false
-    }
+    guard let parent = parent else { return false }
     return (parent as? UINavigationController) == nil
   }
   
@@ -31,74 +28,49 @@ public extension UIViewController {
   
 }
 
-public extension UIViewController {
-  static var x_nibIdentifier: String { return String(describing: self)  }
-  static var x_bundle: Bundle? { return Bundle(for: self) }
-}
-
 // MARK: - PRESENT
 public extension UIViewController {
   
   public func x_present(_ viewController: UIViewController, type: TBPresentationType, data: Any? = nil, animated flag: Bool = true) {
-    (self as? TBNavigationProtocol)?.tbWillPresentViewController(viewController, with: data, animated: flag)
     switch type {
     case .push:
-      navigationController?.x_pushViewController(viewController, animated: flag) { [weak self] in
-        (self as? TBNavigationProtocol)?.tbDidPresentViewController(viewController, with: data, animated: flag)
-      }
+      navigationController?.x_pushViewController(viewController, animated: flag)
     case .modal:
-      present(viewController, animated: flag) { [weak self] in
-        (self as? TBNavigationProtocol)?.tbDidPresentViewController(viewController, with: data, animated: flag)
-      }
-    case .auto:
-      fatalError("[ERROR] TBPresentationType not yet implemented")
+      present(viewController, animated: flag)
     }
   }
+  
 }
 
 
 // MARK: DISMISS
 public extension UIViewController {
-  // TODO: CLEAN IT
-  public func x_dismiss(animated flag: Bool = true, data: Any? = nil, completion: (() -> Void)? = nil) {
+  
+  public func x_dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
     // Modal presentation
-    if let parentController = self.presentingViewController {
-      let navigationDelegate = ((parentController as? UINavigationController)?.topViewController ?? parentController) as? TBNavigationProtocol
-      navigationDelegate?.tbWillDismissViewController(self, with: data, animated: flag)
+    if self.presentingViewController != nil {
       // dissmis presented controller to avoid error
       let completion = { [weak self] in
-        self?.dismiss(animated: flag, completion: { [weak self] in
-          navigationDelegate?.tbDidDismissViewController(self, with: data, animated: flag)
-          completion?()
-        })
+        self?.dismiss(animated: flag, completion: { completion?() })
       }
-      
       if presentedViewController != nil {
         presentedViewController?.x_dismiss(animated: flag) {
           completion()
         }
-        if flag == false {
-          completion()
-        }
+        if flag == false { completion() }
       }
       else {
         completion()
       }
-
     }
       // Push Presentation
     else if let navController = navigationController,
       let topController = navController.topViewController,
       let index = navController.viewControllers.index(of: topController),
       index > 0 {
-      let navigationDelegate = navController.viewControllers[index  - 1] as? TBNavigationProtocol
-      navigationDelegate?.tbWillDismissViewController(self, with: data, animated: flag)
       // dissmis presented controller to avoid error
       presentedViewController?.x_dismiss(animated: flag, completion: nil)
-      _ = navController.x_popViewController(animated: flag) { [weak self] in
-        navigationDelegate?.tbDidDismissViewController(self, with: data, animated: flag)
-        completion?()
-      }
+      _ = navController.x_popViewController(animated: flag) { completion?() }
     }
   }
   
@@ -114,7 +86,7 @@ public extension UIViewController {
     
     // Manage NavigationController
     if let navigationController = self.presentedViewController as? UINavigationController {
-       if let visibleViewController = navigationController.visibleViewController {
+      if let visibleViewController = navigationController.visibleViewController {
         return visibleViewController.x_topVisibleViewController
       }
       return navigationController.x_topVisibleViewController
