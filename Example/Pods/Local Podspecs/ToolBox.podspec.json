@@ -1,6 +1,6 @@
 {
   "name": "ToolBox",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "summary": "ToolBox is a toolbox ;)",
   "description": "ToolBox is a  swift toolbox",
   "homepage": "https://github.com/nberthelot/",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/nberthelot/ToolBox.git",
-    "tag": "0.0.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "10.0",

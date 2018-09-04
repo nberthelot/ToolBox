@@ -9,18 +9,17 @@ ToolBox is a tookbox ;) library written in Swift.
 
 - [Installation](#Installation)
 - [Features](#features)
-- [x] [Router](#Router)
-- [x] Services Container
-- [X] Feature flipping
-- [X] Printer
-- [X] Extensions (Int, Date, Array, Float, ...)
-- [X] Stack type
-- [x] Tabbar Controller
-- [x] Pager Controller
-- [X] Videos helpers ( looper, loader, ...)
-- [X] UICollectionView / UITableView helpers
-- [X] UI animations
-- [X] UI Objects
+- Router
+- Services Container
+- Feature flipping
+- Printer (#Router)
+- Extensions (Int, Date, Array, Float, ...)
+- Tabbar Controller
+- Pager Controller
+- Videos helpers ( looper, loader, ...)
+- UICollectionView / UITableView helpers
+- UI animations
+- UI Objects
 - [Example](#Example)
 - [Requirements](#requirements)
 - [Author](#Author)
@@ -40,10 +39,31 @@ pod 'ToolBox'
 TODO
 
 ## Feature flipping
-TODO
-
+You can create a new feature definition
+```swift
+extension TBFeature.Name {
+public static let foo = TBFeature.Name("foo")
+public static let bar = TBFeature.Name("bar")
+}
+```
+And set/get feature status.
+```swift
+// Set
+TBFeature.set(.foo, enabled: true)
+TBFeature.set(.foo, enabled: false)
+// Get
+TBFeature.isEnabled(.foo)
+```
+Notification is sent when feature status did change (**tbFeaturesDidChange**)
+```swift
+NotificationCenter.default.addObserver(forName: .tbFeaturesDidChange, object: nil, queue: .main) { (notif) in
+if TBFeature.feature(.foo, matchNotification: notif) {
+// Foo feature status did change
+}
+}
+```
 ## Printer
-TBPrint allow you to print some informations and anable/diseable logging. Logger is operational only if **DEBUG** flag is enabled
+TBPrint allow you to print some information and enable/disable logging. Logger is operational only if **DEBUG** flag is enabled
 
 ```swift
 tbPrint("message", category: .ui)
@@ -66,9 +86,6 @@ TBPrint.categories = [PrintCategory.ui, PrintCategory.file]
 
 
 ## Extensions
-TODO
-
-## Stack type
 TODO
 
 ## Tabbar Controller
