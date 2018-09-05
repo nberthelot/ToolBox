@@ -11,7 +11,7 @@ ToolBox is a tookbox ;) library written in Swift.
 - [Features](#features)
 - Router
 - Container
-- Services Container
+- Services
 - Feature flipping
 - Printer (#Router)
 - Extensions (Int, Date, Array, Float, ...)
@@ -113,8 +113,36 @@ let view: UIView? = TBContainer.getValue(for: "collectionView") // nil
 let collectionView: UICollectionView? = TBContainer.getValue(for: "collectionView") // myCollectionView
 ```
 
-## Services Container
-TODO
+## Services
+
+TBServices is a service container. 
+To create service and make it available:
+* Create Service protocol, witch inherits to TBServiceProtocol
+* Create service witch implement the previous protocol and TBServiceProtocol
+* Add service to TBServices
+
+```swift
+protocol MyServiceProtocol: TBServiceProtocol {
+  //Add methodes
+}
+
+final class MyService: MyServiceProtocol {
+  //Add protocol implementation
+  static func loadService() -> MyService {
+    return MyService() // Service can be a singleton or not
+  }
+}
+
+//Add service
+TBServices.add(MyService.self, for: MyServiceProtocol.self)
+
+// Retrieve service
+let service: MyServiceProtocol = TBServices.retrieve()
+//or
+TBServices.retrieve(type: MyServiceProtocol.self)
+```
+
+**Be careful Service needs to be added before retrieved**
 
 ## Feature flipping
 You can create a new feature definition
