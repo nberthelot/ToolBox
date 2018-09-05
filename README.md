@@ -7,20 +7,20 @@
 
 ToolBox is a tookbox ;) library written in Swift.
 
-- [Installation](#Installation)
-- [Features](#features)
-- Router
-- Container
-- Services
-- Feature flipping
-- Printer (#Router)
-- Extensions (Int, Date, Array, Float, ...)
-- Tabbar Controller
-- Pager Controller
-- Videos helpers ( looper, loader, ...)
-- UICollectionView / UITableView helpers
-- UI animations
-- UI Objects
+- [Installation](#installation)
+- [Features](#router)
+  - [Router](#router)
+  - [Container](#container)
+  - [Services](#services)
+  - [Feature flipping](#feature-flipping)
+  - [Printer](#printer)
+  - [UICollectionView / UITableView helpers]
+  - [TabbarViewController]
+  - [Pager Controller]
+  - [Extensions]
+  - [Videos helpers ( looper, loader, ...)
+  - [UI animations]
+  - [UI Objects]
 - [Example](#Example)
 - [Requirements](#requirements)
 - [Author](#Author)
@@ -75,7 +75,7 @@ if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
 }
 ```
 
-To perform a route just call from UIViewController:
+To perform a route just call "x_performRoute" from UIViewController:
 ```swift
 x_performRoute("home", presentationType: .push)
 //or
