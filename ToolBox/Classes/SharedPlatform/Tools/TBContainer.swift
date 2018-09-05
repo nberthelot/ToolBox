@@ -30,8 +30,9 @@ public class TBContainer<T> {
     TBContainer<T>.shared.content[identifier] = value
   }
   
-  public static func removeValue(for identifier: String) {
-    TBContainer<T>.shared.content.removeValue(forKey: identifier)
+  @discardableResult
+  public static func removeValue(for identifier: String)  -> T? {
+    return TBContainer<T>.shared.content.removeValue(forKey: identifier)
   }
   
   public static func getValue(for identifier: String) -> T? {

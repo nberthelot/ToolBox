@@ -22,7 +22,6 @@ class RootViewController: UIViewController, TBRoutable {
     prepare()
   }
   
-  
 }
 
 // MARK: - PREPARE

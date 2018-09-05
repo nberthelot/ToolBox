@@ -10,6 +10,7 @@ ToolBox is a tookbox ;) library written in Swift.
 - [Installation](#Installation)
 - [Features](#features)
 - Router
+- Container
 - Services Container
 - Feature flipping
 - Printer (#Router)
@@ -40,16 +41,16 @@ Router will help you to manage routes and navigation throw the application
 A route is a class (in most of the cases a ViewController) witch implements TBRoutable protocol
 ```swift
 public protocol TBRoutable: class {
-static func loadController(with data: Any?, for route: String) -> UIViewController?
+  static func loadController(with data: Any?, for route: String) -> UIViewController?
 }
 ```
 Example:
 ```swift
 class HomeViewController: UIViewController, TBRoutable {
-public static func loadController(with data: Any?, for route: String) -> UIViewController? {
-//You can add some logic like data validation
-return self.init()
-}
+  public static func loadController(with data: Any?, for route: String) -> UIViewController? {
+    //You can add some logic like data validation
+    return self.init()
+  }
 }
 ```
 
@@ -62,15 +63,15 @@ Or with local or remote router file (JSON)
 *Routes.json*
 ```json
 {
-"home": {
-"class" : "HomeViewController"
-},
+  "home": {
+    "class" : "HomeViewController"
+  },
 }
 ```
 
 ```swift
 if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
-TBRouter.loadRoutes(from: url)
+  TBRouter.loadRoutes(from: url)
 }
 ```
 
@@ -86,6 +87,32 @@ Or just get the route's controller and perform a presentation manually:
 let homeController = TBRouter.route("home", with: someData)
 ```
 
+## Container
+
+TBContaire is a Key/value RAM storage
+```swift
+//Set
+TBContainer.add(1, for: "key")
+//Get
+let val: Int? = TBContainer.getValue(for: "key")
+//Remove
+val = TBContainer.removeValue(for: "key")
+```
+Keys are associated with value type so same key can be reused
+```swift
+TBContainer.add(1, for: "key")
+TBContainer.add("Hello", for: "key")
+
+let val: Int? = TBContainer.getValue(for: "key") // 1
+let val: String? = TBContainer.getValue(for: "key") // "Hello"
+```
+Be careful TBContainer doesn't work with inheritance, **Set and Get need to use same Type**
+```swift
+TBContainer.add(myCollectionView, for: "view")
+let view: UIView? = TBContainer.getValue(for: "collectionView") // nil
+let collectionView: UICollectionView? = TBContainer.getValue(for: "collectionView") // myCollectionView
+```
+
 ## Services Container
 TODO
 
@@ -93,8 +120,8 @@ TODO
 You can create a new feature definition
 ```swift
 extension TBFeature.Name {
-public static let foo = TBFeature.Name("foo")
-public static let bar = TBFeature.Name("bar")
+  public static let foo = TBFeature.Name("foo")
+  public static let bar = TBFeature.Name("bar")
 }
 ```
 And set/get feature status.
@@ -108,9 +135,9 @@ TBFeature.isEnabled(.foo)
 Notification is sent when feature status did change (**tbFeaturesDidChange**)
 ```swift
 NotificationCenter.default.addObserver(forName: .tbFeaturesDidChange, object: nil, queue: .main) { (notif) in
-if TBFeature.feature(.foo, matchNotification: notif) {
-// Foo feature status did change
-}
+  if TBFeature.feature(.foo, matchNotification: notif) {
+    // Foo feature status did change
+  }
 }
 ```
 ## Printer
