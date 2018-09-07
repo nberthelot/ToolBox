@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/ToolBox.svg?style=flat)](https://cocoapods.org/pods/ToolBox)
 
 
-ToolBox is a tookbox ;) library written in Swift.
+ToolBox is a toolbox ;) library written in Swift.
 
 - [Installation](#installation)
 - [Features](#router)
@@ -31,9 +31,9 @@ pod 'ToolBox'
 
 ##  Router
 
-Router will help you to manage routes and navigation throw the application
+Router will help you to manage routes and navigation through the application.
 
-A route is a class (in most of the cases a ViewController) witch implements TBRoutable protocol
+A route is a class (in most cases a `UIViewController`) which implements TBRoutable protocol:
 ```swift
 public protocol TBRoutable: class {
   static func loadController(with data: Any?, for route: String) -> UIViewController?
@@ -49,12 +49,12 @@ class HomeViewController: UIViewController, TBRoutable {
 }
 ```
 
-Routes can be added manually 
+Routes can be added manually:
 
 ```swift
 TBRouter.addRoute("home", routableClass: HomeViewController.self)
 ```
-Or with local or remote router file (JSON)
+Or with local or remote router file (JSON):
 *Routes.json*
 ```json
 {
@@ -70,21 +70,21 @@ if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
 }
 ```
 
-To perform a route just call "x_performRoute" from UIViewController:
+To perform a route just call `x_performRoute` from `UIViewController`:
 ```swift
 x_performRoute("home", presentationType: .push)
 //or
 x_performRoute("home", presentationType: .modal, data: someData, animated: true)
 ```
 
-Or just get the route's controller and perform a presentation manually:
+Or just get the route's controller and perform a presentation programmatically:
 ```swift
 let homeController = TBRouter.route("home", with: someData)
 ```
 
 ## Container
 
-TBContaire is a Key/value RAM storage
+`TBContainer` is a key/value RAM storage
 ```swift
 //Set
 TBContainer.add(1, for: "key")
@@ -101,43 +101,43 @@ TBContainer.add("Hello", for: "key")
 let val: Int? = TBContainer.getValue(for: "key") // 1
 let val: String? = TBContainer.getValue(for: "key") // "Hello"
 ```
-Be careful TBContainer doesn't work with inheritance, **Set and Get need to use same Type**
+Be careful: `TBContainer` doesn't work with inheritance, **`set` and `get` need to use the same type**
 ```swift
-TBContainer.add(myCollectionView, for: "view")
+TBContainer.add(myCollectionView, for: "collectionView")
 let view: UIView? = TBContainer.getValue(for: "collectionView") // nil
 let collectionView: UICollectionView? = TBContainer.getValue(for: "collectionView") // myCollectionView
 ```
 
 ## Services
 
-TBServices is a service container. 
-To create service and make it available:
-* Create Service protocol, witch inherits to TBServiceProtocol
-* Create service witch implement the previous protocol and TBServiceProtocol
-* Add service to TBServices
+`TBServices` is a service container. 
+To create a service and make it available:
+* Create `MyServiceProtocol` protocol, witch inherits `TBServiceProtocol`
+* Create your service which implements the previous protocol and `TBServiceProtocol`
+* Add the service to `TBServices`
 
 ```swift
 protocol MyServiceProtocol: TBServiceProtocol {
-  //Add methodes
+  // Add methods
 }
 
 final class MyService: MyServiceProtocol {
-  //Add protocol implementation
+  // Add protocol implementation
   static func loadService() -> MyService {
     return MyService() // Service can be a singleton or not
   }
 }
 
-//Add service
+// Add service
 TBServices.add(MyService.self, for: MyServiceProtocol.self)
 
 // Retrieve service
 let service: MyServiceProtocol = TBServices.retrieve()
-//or
+// or
 TBServices.retrieve(type: MyServiceProtocol.self)
 ```
 
-**Be careful Service needs to be added before retrieved**
+**Be careful: the service needs to be added before being retrieved**
 
 ## Feature flipping
 You can create a new feature definition
@@ -153,9 +153,11 @@ And set/get feature status.
 TBFeature.set(.foo, enabled: true)
 TBFeature.set(.foo, enabled: false)
 // Get
-TBFeature.isEnabled(.foo)
+TBFeature.isEnabled(.foo) // false
 ```
-Notification is sent when feature status did change (**tbFeaturesDidChange**)
+
+Notification is sent when feature status did change (`tbFeaturesDidChange`):
+
 ```swift
 NotificationCenter.default.addObserver(forName: .tbFeaturesDidChange, object: nil, queue: .main) { (notif) in
   if TBFeature.feature(.foo, matchNotification: notif) {
@@ -163,8 +165,10 @@ NotificationCenter.default.addObserver(forName: .tbFeaturesDidChange, object: ni
   }
 }
 ```
+
 ## Printer
-TBPrint allow you to print some information and enable/disable logging. Logger is operational only if **DEBUG** flag is enabled
+
+`TBPrint` allow you to print informations and toggle logging. Logger is operational only if **DEBUG** flag is enabled.
 
 ```swift
 tbPrint("message", category: .ui)
@@ -172,42 +176,44 @@ tbDebugPrint("message", category: .ui)
 ```
 
 Categories are :
-* network
-* database
-* data
-* file
-* service
-* ui
-* none
+* `network`
+* `database`
+* `data`
+* `file`
+* `service`
+* `ui`
+* `none`
 
-You can select categories logged:
+You can select which categories are logged:
+
 ```swift
 TBPrint.categories = [PrintCategory.ui, PrintCategory.file]
 ```
 
+
 ## TBReusable
 
-TBReusable is a protocol for cell (UICollectionView and UITableViewCell) which simply cell registration and cell dequeue
+TBReusable is a protocol for cells (`UICollectionView` and `UITableViewCell`) which simplify cell registration and cell dequeue.
 
 ```swift
 public class MyTableViewCell: UITableViewCell, TBReusable {
 
 }
 
-//Register
+// Register
 tableView.x_registerReusableCell(MyTableViewCell.self)
 
-//Dequeue
+// Dequeue
 let cell: MyTableViewCell = tableView.x_dequeueReusableCell(indexPath: indexPath)
 ```
 
 ## Other
 
-ToolBox contains other features (In the ongoing process) like:
-- Tabbar with custom tabbar item
-- Pager with custom transition
-- Some extensions (Date, Array, Float, String, AVURLAsset, UIViewController, ...)
-- UIObject
+ToolBox contains other undocumented features like:
+- Tabbar with custom tabbar items
+- Pager with custom transitions
+- Some extensions (`Date`, `Array`, `Float`, `String`, `AVURLAsset`, `UIViewController`...)
+- `UIObject`
 
 # Requirements
 
@@ -217,11 +223,12 @@ ToolBox contains other features (In the ongoing process) like:
 
 # Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repository, and run `pod install` from the `Example` directory first.
 
 # Author
-Berthelot nicolas
+
+Nicolas Berthelot
 
 # License
 
-ToolBox is available under the MIT license. See the LICENSE file for more info.
+ToolBox is available under the MIT license. See the LICENSE file for more informations.
