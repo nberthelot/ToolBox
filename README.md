@@ -15,7 +15,7 @@ ToolBox is a tookbox ;) library written in Swift.
   - [Feature flipping](#feature-flipping)
   - [Printer](#printer)
   - [TBReusable](#tbreusable)
-  - [....]
+  - [Other](#other)
 - [Example](#Example)
 - [Requirements](#requirements)
 - [Author](#Author)
@@ -200,6 +200,14 @@ tableView.x_registerReusableCell(MyTableViewCell.self)
 //Dequeue
 let cell: MyTableViewCell = tableView.x_dequeueReusableCell(indexPath: indexPath)
 ```
+
+## Other
+
+ToolBox contains other features (In the ongoing process) like:
+- Tabbar with custom tabbar item
+- Pager with custom transition
+- Some extensions (Date, Array, Float, String, AVURLAsset, UIViewController, ...)
+- UIObject
 
 # Requirements
 

@@ -21,7 +21,6 @@
 		343B7511AB6293F483E602A98630360C /* ISO8601+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E774E9712C5E03A9F183BD88C14EF7 /* ISO8601+Tools.swift */; };
 		3DD3836D70C2CEAA7D8C0AA0DE23AC49 /* TBVideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196ADF22BA4CA217A0E3C3A99042FA2B /* TBVideoLooperView.swift */; };
 		3DE041961E25C38B10910D8B02ECE4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		40231EC370092CE69BEB10D65773384B /* TBFadeWithBlurAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */; };
 		4877CCAD4F9BC448257B18F190D627D0 /* AVURLAsset+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D2A161028C7768613DBFA0BC19230 /* AVURLAsset+Tools.swift */; };
 		550C06CEA20552EEEA3537756B890DCF /* TBPagerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA9AF59865F5E9A45D5A8D88241FCE /* TBPagerViewDelegate.swift */; };
 		5799324B916784F73C67CE938377D088 /* Pods-ToolBox_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 358C02A7924CE24FD1EADCE590E205FE /* Pods-ToolBox_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,7 +34,6 @@
 		76F4318231C008AF2E514DEF516017DB /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C16439C4DF66534DDABDC822189A396 /* UITableView+Reusable.swift */; };
 		7740E2EDB56A5DEEC0386B6E642C252C /* UINavigationController+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1DA3AC5C80B75CFE6B01EBDEA452D7 /* UINavigationController+Tools.swift */; };
 		7978D9907C787BFC4EDE94068B51C365 /* Float+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0783DCB15B81FF0C8FE1C3138ADD9DE /* Float+Tools.swift */; };
-		7DC22512371BEAFB9F5BD198234CCB35 /* TBRotationWithFadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */; };
 		7F5565ACC9CCCB7B5F7DEACFB29EEF0F /* ToolBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02420C43E82E60C23600A09026916066 /* ToolBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8583D85AD1FC72957620D87C6BCEAB8C /* TBTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8F87019FD3CBFACE0C52C87B13CB0 /* TBTabbarViewController.swift */; };
 		8694C531993CB2B6F026462DABDF350C /* UIFont+DynamicLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6979C097FF2DE4ADED1811F406992F /* UIFont+DynamicLoading.swift */; };
@@ -64,7 +62,6 @@
 		E7D7E693313A7B13425594AB46AAB0B6 /* Array+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F565DA1004B40086BC2A6CFDB85E8 /* Array+Tools.swift */; };
 		EC379BA359E1E33A9F808E5F255425CE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4D5FFA0429090C62D4C0B46D4FC4 /* UIViewController+Alert.swift */; };
 		EFCF1B0CCD93A611A740587A6205C41D /* TBGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF84A283EFCAF17EC881AB4546E476 /* TBGradientView.swift */; };
-		F619DB01E95274F297B4B43068C1A462 /* TBFadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A861D3D8083B80F0F3B8698607864E /* TBFadeAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +107,6 @@
 		417DFEDBADC0CCDD9A9BED09F52050E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		46CA9AF59865F5E9A45D5A8D88241FCE /* TBPagerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPagerViewDelegate.swift; sourceTree = "<group>"; };
 		4877AA3F6216EED1E81B063954262B10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBRotationWithFadeAnimator.swift; sourceTree = "<group>"; };
 		4CF85F8B13916D63984FE27B28998E4F /* ToolBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ToolBox.modulemap; sourceTree = "<group>"; };
 		4FC6227BB6C68A5F90710E8B2E50356F /* Pods-ToolBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5337337EB18C42461FAD94E8ADD7CC0D /* MGLoggerServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerServiceProtocol.swift; sourceTree = "<group>"; };
@@ -129,7 +125,6 @@
 		6D444B1F1ED0B36E665888809651E35B /* Pods-ToolBox_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToolBox_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7328E5DE213E68E9006A4D83 /* TBFeatureName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBFeatureName.swift; sourceTree = "<group>"; };
 		762EC1358899F37406B58C6911622B7B /* String+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Tools.swift"; sourceTree = "<group>"; };
-		77A861D3D8083B80F0F3B8698607864E /* TBFadeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBFadeAnimator.swift; sourceTree = "<group>"; };
 		7A77E88A7C1000ED51095ECF36D00D03 /* UIView+Animations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		7B7CF4799BBA30A6B8EBF61D84DA4CE8 /* TBPagerViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPagerViewTransformer.swift; sourceTree = "<group>"; };
 		80C377CA19D7CAFBE848F21444F8DADB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +136,6 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94975C2F1755C6EE98017F1831D57E0C /* Pods-ToolBox_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ToolBox_Example.modulemap"; sourceTree = "<group>"; };
 		94E774E9712C5E03A9F183BD88C14EF7 /* ISO8601+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ISO8601+Tools.swift"; sourceTree = "<group>"; };
-		969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBFadeWithBlurAnimator.swift; sourceTree = "<group>"; };
 		9BEA50874EA01F8A09D2F0E0E116CCA5 /* ToolBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ToolBox.xcconfig; sourceTree = "<group>"; };
 		9D2B130E1E77BAE4254B569737AEDABB /* Pods-ToolBox_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToolBox_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AFFEFB4DF609FA53CC4EAFC82EB10117 /* TBPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPagerView.swift; sourceTree = "<group>"; };
@@ -252,16 +246,6 @@
 				7B7CF4799BBA30A6B8EBF61D84DA4CE8 /* TBPagerViewTransformer.swift */,
 			);
 			path = Transformers;
-			sourceTree = "<group>";
-		};
-		36C485BDF4CFFE74DAC746596134DAFD /* Animators */ = {
-			isa = PBXGroup;
-			children = (
-				77A861D3D8083B80F0F3B8698607864E /* TBFadeAnimator.swift */,
-				969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */,
-				4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */,
-			);
-			path = Animators;
 			sourceTree = "<group>";
 		};
 		38333FEBAFB3E50AABDE0E46386777A1 /* Router */ = {
@@ -466,7 +450,6 @@
 		D98E87851213A14327098728354EB468 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				36C485BDF4CFFE74DAC746596134DAFD /* Animators */,
 				48A0A664EB7C8A789069A6DC1AF62804 /* Extensions */,
 				3900174A6711E4602A4826270310CAB9 /* Protocols */,
 				EB7814950AA49F31975837797740DDD9 /* Tools */,
@@ -694,8 +677,6 @@
 				99A41334D611210CB4AF84F51EAB364D /* MGLoggerServiceProtocol.swift in Sources */,
 				DF957632C7AB3B2A8317B82D4328F3BE /* String+Tools.swift in Sources */,
 				A1257B1410EDB5572F4F269325564A9F /* TBContainer.swift in Sources */,
-				F619DB01E95274F297B4B43068C1A462 /* TBFadeAnimator.swift in Sources */,
-				40231EC370092CE69BEB10D65773384B /* TBFadeWithBlurAnimator.swift in Sources */,
 				B9A0AC35A7FBFFCB4BD77DC355E81322 /* TBFeature.swift in Sources */,
 				08F3F90B1A729757FA575C1AE45DEF58 /* TBGradientButton.swift in Sources */,
 				EFCF1B0CCD93A611A740587A6205C41D /* TBGradientView.swift in Sources */,
@@ -711,7 +692,6 @@
 				2E756F4710BA64CBBFA2C2257D0FFFDE /* TBPresentationType.swift in Sources */,
 				227C890F053FE439382F60C80D3EEC8B /* TBPrint.swift in Sources */,
 				BC2FE17D4CEC38DDFD2E1EE6AD30253F /* TBReusable.swift in Sources */,
-				7DC22512371BEAFB9F5BD198234CCB35 /* TBRotationWithFadeAnimator.swift in Sources */,
 				D29CDA81035097293F9E3F1BFA160C2D /* TBRoutable.swift in Sources */,
 				8906A14B157C146713F665F9822FAEFD /* TBRouter.swift in Sources */,
 				10D071FFA208402D7DFC62725A2FEA98 /* TBServiceProtocol.swift in Sources */,
