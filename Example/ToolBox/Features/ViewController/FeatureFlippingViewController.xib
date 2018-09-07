@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeatureFlippingViewController" customModule="ToolBox_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="barStatusLabel" destination="ghD-BA-Yi5" id="uaC-gk-p5F"/>
+                <outlet property="barSwitch" destination="bEN-M7-oO0" id="yue-dm-m5b"/>
+                <outlet property="fooStatusLabel" destination="lX3-ES-7fR" id="WcM-Po-GxT"/>
+                <outlet property="fooSwitch" destination="bPN-UY-dto" id="ZjJ-EL-5ve"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Hlg-6H-FtC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Foo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-J9-HUE">
+                    <rect key="frame" x="20" y="271.5" width="92" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRc-ve-NHU">
+                    <rect key="frame" x="20" y="312.5" width="89" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPN-UY-dto">
+                    <rect key="frame" x="306" y="266.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="fooSwitchValueDidChanged:" destination="-1" eventType="valueChanged" id="XkI-gi-BaC"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-M7-oO0">
+                    <rect key="frame" x="306" y="307.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="barSwitchValueDidChanged:" destination="-1" eventType="valueChanged" id="86t-LL-xJE"/>
+                    </connections>
+                </switch>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-s0-fWR">
+                    <rect key="frame" x="317" y="32" width="39" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="tappedOnCloseButton:" destination="-1" eventType="touchUpInside" id="SAu-fw-Lm0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fearure Foo is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho5-cD-bV0">
+                    <rect key="frame" x="20" y="373.5" width="118" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-ES-7fR">
+                    <rect key="frame" x="138" y="374" width="62" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fearure Bar is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJS-2X-j2J">
+                    <rect key="frame" x="20" y="404.5" width="115" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghD-BA-Yi5">
+                    <rect key="frame" x="135" y="404.5" width="62" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstItem="MRc-ve-NHU" firstAttribute="top" secondItem="1Xw-J9-HUE" secondAttribute="bottom" constant="20" id="2gH-MX-QA1"/>
+                <constraint firstItem="bPN-UY-dto" firstAttribute="centerY" secondItem="1Xw-J9-HUE" secondAttribute="centerY" id="4bM-VM-eid"/>
+                <constraint firstItem="lX3-ES-7fR" firstAttribute="leading" secondItem="ho5-cD-bV0" secondAttribute="trailing" id="5bg-Ip-BVL"/>
+                <constraint firstItem="ho5-cD-bV0" firstAttribute="top" secondItem="MRc-ve-NHU" secondAttribute="bottom" constant="40" id="95K-lK-AIi"/>
+                <constraint firstItem="MRc-ve-NHU" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BE6-n9-ykw"/>
+                <constraint firstItem="1Xw-J9-HUE" firstAttribute="leading" secondItem="MRc-ve-NHU" secondAttribute="leading" id="CC3-PW-lZH"/>
+                <constraint firstItem="ghD-BA-Yi5" firstAttribute="centerY" secondItem="tJS-2X-j2J" secondAttribute="centerY" id="FFX-mf-03e"/>
+                <constraint firstItem="MRc-ve-NHU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="IKT-oP-pT6"/>
+                <constraint firstItem="ghD-BA-Yi5" firstAttribute="leading" secondItem="tJS-2X-j2J" secondAttribute="trailing" id="NBx-EO-iqa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bEN-M7-oO0" secondAttribute="trailing" constant="20" id="Wg7-SX-MGd"/>
+                <constraint firstItem="lX3-ES-7fR" firstAttribute="centerY" secondItem="ho5-cD-bV0" secondAttribute="centerY" id="X7H-0F-8ta"/>
+                <constraint firstItem="ho5-cD-bV0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="YOe-vu-1I9"/>
+                <constraint firstItem="bPN-UY-dto" firstAttribute="trailing" secondItem="bEN-M7-oO0" secondAttribute="trailing" id="cj5-fz-oDB"/>
+                <constraint firstItem="bEN-M7-oO0" firstAttribute="centerY" secondItem="MRc-ve-NHU" secondAttribute="centerY" id="nA7-uK-YWJ"/>
+                <constraint firstItem="tJS-2X-j2J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="s7q-EQ-0Jy"/>
+                <constraint firstItem="tJS-2X-j2J" firstAttribute="top" secondItem="ho5-cD-bV0" secondAttribute="bottom" constant="10" id="tsz-kw-W87"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="background">
+            <color white="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

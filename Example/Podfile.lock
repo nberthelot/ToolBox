@@ -1,5 +1,5 @@
 PODS:
-  - ToolBox (0.0.1)
+  - ToolBox (0.1.2)
 
 DEPENDENCIES:
   - ToolBox (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ToolBox: c51a6741ed95db733cd193acb748cbbdca4ae187
+  ToolBox: 0852daffdb6d8e52a572116102de4a23d559fbff
 
 PODFILE CHECKSUM: dae60544d56ad95f6fcb3bd5256063f5c4a08dbd
 

@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		21091D51F230CEEB76D73AEA /* Pods_ToolBox_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2E6F01EBB0E89E78744CF1 /* Pods_ToolBox_Example.framework */; };
+		37CA5CFB21367C0700A2D54E /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */; };
+		37CA5CFE21367C8300A2D54E /* ExampleTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */; };
+		37CA5D0021367DA400A2D54E /* ExampleTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */; };
+		37CA5D042136818800A2D54E /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CA5D032136818800A2D54E /* Routes.json */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* RootViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7328E5D8213D2236006A4D83 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5D7213D2236006A4D83 /* Features.swift */; };
+		7328E5DB213D24BD006A4D83 /* FeatureFlippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5DA213D24BD006A4D83 /* FeatureFlippingViewController.swift */; };
+		7328E5DD213D24C5006A4D83 /* FeatureFlippingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7328E5DC213D24C5006A4D83 /* FeatureFlippingViewController.xib */; };
+		7328E5E1213E6DBC006A4D83 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7328E5E0213E6DBC006A4D83 /* Colors.xcassets */; };
+		7328E5E3213E76DF006A4D83 /* FeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5E2213E76DF006A4D83 /* FeaturesTests.swift */; };
+		7328E5E5213EB20E006A4D83 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5E4213EB20E006A4D83 /* RouterTests.swift */; };
+		7328E5E8213EB282006A4D83 /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 7328E5E7213EB282006A4D83 /* Routes.json */; };
+		7328E5EA213FB6BC006A4D83 /* ContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5E9213FB6BC006A4D83 /* ContainerTests.swift */; };
+		7328E5EC213FBFA0006A4D83 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7328E5EB213FBFA0006A4D83 /* ServicesTests.swift */; };
 		B0B4649F0D78E1BD5A190D14 /* Pods_ToolBox_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD49BA3D314059F900ABAB66 /* Pods_ToolBox_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,16 +41,28 @@
 
 /* Begin PBXFileReference section */
 		1A8BB8547535633E42CA012C /* Pods-ToolBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBox_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBox_Tests/Pods-ToolBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTitleTableViewCell.swift; sourceTree = "<group>"; };
+		37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleTitleTableViewCell.xib; sourceTree = "<group>"; };
+		37CA5D032136818800A2D54E /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ToolBox_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolBox_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ToolBox_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolBox_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		7328E5D7213D2236006A4D83 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		7328E5DA213D24BD006A4D83 /* FeatureFlippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlippingViewController.swift; sourceTree = "<group>"; };
+		7328E5DC213D24C5006A4D83 /* FeatureFlippingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureFlippingViewController.xib; sourceTree = "<group>"; };
+		7328E5E0213E6DBC006A4D83 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7328E5E2213E76DF006A4D83 /* FeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTests.swift; sourceTree = "<group>"; };
+		7328E5E4213EB20E006A4D83 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		7328E5E7213EB282006A4D83 /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
+		7328E5E9213FB6BC006A4D83 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
+		7328E5EB213FBFA0006A4D83 /* ServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
 		775FD085FE9897A1012EF684 /* Pods-ToolBox_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBox_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBox_Tests/Pods-ToolBox_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2E6F01EBB0E89E78744CF1 /* Pods_ToolBox_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBox_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D03C944179BF0E0BDA750E8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -69,6 +93,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37CA5CF921367C0700A2D54E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				37CA5CFA21367C0700A2D54E /* TabbarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		37CA5CFC21367C4700A2D54E /* ReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				37CA5CFD21367C8300A2D54E /* ExampleTitleTableViewCell.swift */,
+				37CA5CFF21367DA400A2D54E /* ExampleTitleTableViewCell.xib */,
+			);
+			path = ReusableCell;
+			sourceTree = "<group>";
+		};
+		37CA5D012136816800A2D54E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				7328E5E0213E6DBC006A4D83 /* Colors.xcassets */,
+				37CA5D032136818800A2D54E /* Routes.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +144,13 @@
 		607FACD21AFB9204008FA782 /* Example for ToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD71AFB9204008FA782 /* RootViewController.swift */,
+				37CA5D012136816800A2D54E /* Assets */,
+				7328E5D6213D21A9006A4D83 /* Features */,
+				37CA5CF921367C0700A2D54E /* Tabbar */,
+				37CA5CFC21367C4700A2D54E /* ReusableCell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -115,7 +169,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				7328E5E9213FB6BC006A4D83 /* ContainerTests.swift */,
+				7328E5E2213E76DF006A4D83 /* FeaturesTests.swift */,
+				7328E5EB213FBFA0006A4D83 /* ServicesTests.swift */,
+				7328E5E6213EB231006A4D83 /* Router */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -137,6 +194,33 @@
 				8D03C944179BF0E0BDA750E8 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7328E5D6213D21A9006A4D83 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7328E5D7213D2236006A4D83 /* Features.swift */,
+				7328E5D9213D247E006A4D83 /* ViewController */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7328E5D9213D247E006A4D83 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7328E5DA213D24BD006A4D83 /* FeatureFlippingViewController.swift */,
+				7328E5DC213D24C5006A4D83 /* FeatureFlippingViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7328E5E6213EB231006A4D83 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7328E5E4213EB20E006A4D83 /* RouterTests.swift */,
+				7328E5E7213EB282006A4D83 /* Routes.json */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 		A09F73656BBD7AC815E53641 /* Pods */ = {
@@ -248,8 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				37CA5D042136818800A2D54E /* Routes.json in Resources */,
+				7328E5DD213D24C5006A4D83 /* FeatureFlippingViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				7328E5E8213EB282006A4D83 /* Routes.json in Resources */,
+				37CA5D0021367DA400A2D54E /* ExampleTitleTableViewCell.xib in Resources */,
+				7328E5E1213E6DBC006A4D83 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +413,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* RootViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				37CA5CFB21367C0700A2D54E /* TabbarViewController.swift in Sources */,
+				7328E5D8213D2236006A4D83 /* Features.swift in Sources */,
+				7328E5DB213D24BD006A4D83 /* FeatureFlippingViewController.swift in Sources */,
+				37CA5CFE21367C8300A2D54E /* ExampleTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				7328E5EA213FB6BC006A4D83 /* ContainerTests.swift in Sources */,
+				7328E5EC213FBFA0006A4D83 /* ServicesTests.swift in Sources */,
+				7328E5E5213EB20E006A4D83 /* RouterTests.swift in Sources */,
+				7328E5E3213E76DF006A4D83 /* FeaturesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +573,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5NYZNQNGV9;
 				INFOPLIST_FILE = ToolBox/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5NYZNQNGV9;
 				INFOPLIST_FILE = ToolBox/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

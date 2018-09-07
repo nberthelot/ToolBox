@@ -10,9 +10,8 @@ import Foundation
 public struct TBServices {
   
   fileprivate static var instance = TBServices()
-  fileprivate var services = [String:  TBServiceProtocol.Type]()
+  fileprivate var services = [String: TBServiceProtocol.Type]()
   
-  // TODO: find a way to replace this by add(serviceType)
   public static func add<T>(_ serviceType : TBServiceProtocol.Type, for protocol: T.Type) {
     let key = String(describing: T.self)
     instance.services[key] = serviceType
@@ -21,6 +20,7 @@ public struct TBServices {
   public static func retrieve<T>() -> T {
     return retrieve(type: T.self)
   }
+  
   public static func retrieve<T>(type : T.Type) -> T {
     let key = String(describing: T.self)
     
@@ -33,5 +33,10 @@ public struct TBServices {
     return srv as! T
   }
   
+  public static func remove<T>(serviceProtocol: T.Type) {
+    let key = String(describing: T.self)
+    instance.services.removeValue(forKey: key)
+  }
+
 }
 

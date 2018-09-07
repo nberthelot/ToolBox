@@ -1,0 +1,10 @@
+{
+  "tabbar": {
+    "class" : "TabbarViewController"
+  },
+  
+  "featureFlipping": {
+    "class" : "FeatureFlippingViewController"
+  },
+  
+}
