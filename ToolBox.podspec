@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ToolBox'
-  s.version          = '0.1.2'
+  s.version          = '0.2.0'
   s.summary          = 'ToolBox is a toolbox ;)'
   
   # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   
   s.description      = <<-DESC
-  ToolBox is a  swift toolbox
+  ToolBox is a swift toolbox
   DESC
   
   s.homepage         = 'https://github.com/nberthelot/'
