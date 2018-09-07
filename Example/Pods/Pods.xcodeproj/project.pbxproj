@@ -19,7 +19,6 @@
 		2E756F4710BA64CBBFA2C2257D0FFFDE /* TBPresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27C7417A74C7DA7F5CAD7132EF26AE /* TBPresentationType.swift */; };
 		31F9890003851170150B654421F28343 /* TBOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1D8125B165229CD682616B6CB949E /* TBOS.swift */; };
 		343B7511AB6293F483E602A98630360C /* ISO8601+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E774E9712C5E03A9F183BD88C14EF7 /* ISO8601+Tools.swift */; };
-		3D21BFB959D94D489883D9273185262C /* TBCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABB5E52BAB0EB35A48E21552787B3F /* TBCellProtocol.swift */; };
 		3DD3836D70C2CEAA7D8C0AA0DE23AC49 /* TBVideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196ADF22BA4CA217A0E3C3A99042FA2B /* TBVideoLooperView.swift */; };
 		3DE041961E25C38B10910D8B02ECE4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		40231EC370092CE69BEB10D65773384B /* TBFadeWithBlurAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969AB64BAFE6CD54886E7F0672132F10 /* TBFadeWithBlurAnimator.swift */; };
@@ -52,7 +51,6 @@
 		B9A0AC35A7FBFFCB4BD77DC355E81322 /* TBFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA20D41B4C3D99B1FBD2267C61A2D13 /* TBFeature.swift */; };
 		BC2FE17D4CEC38DDFD2E1EE6AD30253F /* TBReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */; };
 		C1A807F63CF8111AEF139EAA90EB51D3 /* ToolBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0445DE2038FAB8F53ABEC60A2F27A70 /* ToolBox-dummy.m */; };
-		C368B57A8939FB1F54E509005327C65C /* TBKeyboardNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455727CB0B10F47B6F5B9028CA4F7AB0 /* TBKeyboardNotificationsProtocol.swift */; };
 		CB9AAC7266412E40AA1F0896B66FA9C4 /* TBPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE375AFAE3CDCB4D36FCB3E317ABEDA /* TBPlayerView.swift */; };
 		CF69072E3D5C30826C9D41E0BF744967 /* TBPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC35B64B059F2273C0AE972272DCA9 /* TBPaddedLabel.swift */; };
 		D2974AAFB0843022BF71868259046AE9 /* UIScreen+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F65766EE6E3FD15071B02B96746188A /* UIScreen+Tools.swift */; };
@@ -110,13 +108,11 @@
 		3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBReusable.swift; sourceTree = "<group>"; };
 		3E1DA3AC5C80B75CFE6B01EBDEA452D7 /* UINavigationController+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Tools.swift"; sourceTree = "<group>"; };
 		417DFEDBADC0CCDD9A9BED09F52050E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		455727CB0B10F47B6F5B9028CA4F7AB0 /* TBKeyboardNotificationsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBKeyboardNotificationsProtocol.swift; sourceTree = "<group>"; };
 		46CA9AF59865F5E9A45D5A8D88241FCE /* TBPagerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPagerViewDelegate.swift; sourceTree = "<group>"; };
 		4877AA3F6216EED1E81B063954262B10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4BEDA3FA1B46DC78A5F46244CFC5B5C9 /* TBRotationWithFadeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBRotationWithFadeAnimator.swift; sourceTree = "<group>"; };
 		4CF85F8B13916D63984FE27B28998E4F /* ToolBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ToolBox.modulemap; sourceTree = "<group>"; };
 		4FC6227BB6C68A5F90710E8B2E50356F /* Pods-ToolBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Example.release.xcconfig"; sourceTree = "<group>"; };
-		50ABB5E52BAB0EB35A48E21552787B3F /* TBCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBCellProtocol.swift; sourceTree = "<group>"; };
 		5337337EB18C42461FAD94E8ADD7CC0D /* MGLoggerServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerServiceProtocol.swift; sourceTree = "<group>"; };
 		5485A5A17E9EB886E42D0F28267FF009 /* Pods-ToolBox_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToolBox_Example-umbrella.h"; sourceTree = "<group>"; };
 		57B1D8125B165229CD682616B6CB949E /* TBOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBOS.swift; sourceTree = "<group>"; };
@@ -281,8 +277,6 @@
 		3900174A6711E4602A4826270310CAB9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				50ABB5E52BAB0EB35A48E21552787B3F /* TBCellProtocol.swift */,
-				455727CB0B10F47B6F5B9028CA4F7AB0 /* TBKeyboardNotificationsProtocol.swift */,
 				3C5BF2E06FC11BB59064940FFB9C66D3 /* TBReusable.swift */,
 				2DF06A0A77BC1E779CC71681E40C721C /* TBShimmeringViewProtocol.swift */,
 			);
@@ -699,14 +693,12 @@
 				1ADA9CF82CC5FA66C2A3D2B61691912C /* MGLoggerService.swift in Sources */,
 				99A41334D611210CB4AF84F51EAB364D /* MGLoggerServiceProtocol.swift in Sources */,
 				DF957632C7AB3B2A8317B82D4328F3BE /* String+Tools.swift in Sources */,
-				3D21BFB959D94D489883D9273185262C /* TBCellProtocol.swift in Sources */,
 				A1257B1410EDB5572F4F269325564A9F /* TBContainer.swift in Sources */,
 				F619DB01E95274F297B4B43068C1A462 /* TBFadeAnimator.swift in Sources */,
 				40231EC370092CE69BEB10D65773384B /* TBFadeWithBlurAnimator.swift in Sources */,
 				B9A0AC35A7FBFFCB4BD77DC355E81322 /* TBFeature.swift in Sources */,
 				08F3F90B1A729757FA575C1AE45DEF58 /* TBGradientButton.swift in Sources */,
 				EFCF1B0CCD93A611A740587A6205C41D /* TBGradientView.swift in Sources */,
-				C368B57A8939FB1F54E509005327C65C /* TBKeyboardNotificationsProtocol.swift in Sources */,
 				1C97C60443653916CCA4A1F888524F5C /* TBMultiGradientView.swift in Sources */,
 				21957C9EF6A65F4F627310B2E2A585B2 /* TBNibLoadable.swift in Sources */,
 				AB818D05B03AE36023140B2A983E901F /* TBOS+iOS.swift in Sources */,

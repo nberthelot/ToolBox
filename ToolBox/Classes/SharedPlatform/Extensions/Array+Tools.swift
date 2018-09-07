@@ -86,12 +86,13 @@ extension MutableCollection {
 }
 
 extension Sequence {
-  /// Returns an array with the contents of this sequence, shuffled.
+  
   public func x_shuffled() -> [Iterator.Element] {
     var result = Array(self)
     result.x_shuffle()
     return result
   }
+  
 }
 
 extension Dictionary {

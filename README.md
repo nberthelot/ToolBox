@@ -14,13 +14,8 @@ ToolBox is a tookbox ;) library written in Swift.
   - [Services](#services)
   - [Feature flipping](#feature-flipping)
   - [Printer](#printer)
-  - [UICollectionView / UITableView helpers]
-  - [TabbarViewController]
-  - [Pager Controller]
-  - [Extensions]
-  - [Videos helpers ( looper, loader, ...)
-  - [UI animations]
-  - [UI Objects]
+  - [TBReusable](#tbreusable)
+  - [....]
 - [Example](#Example)
 - [Requirements](#requirements)
 - [Author](#Author)
@@ -190,27 +185,21 @@ You can select categories logged:
 TBPrint.categories = [PrintCategory.ui, PrintCategory.file]
 ```
 
+## TBReusable
 
-## Extensions
-TODO
+TBReusable is a protocol for cell (UICollectionView and UITableViewCell) which simply cell registration and cell dequeue
 
-## Tabbar Controller
-TODO
+```swift
+public class MyTableViewCell: UITableViewCell, TBReusable {
 
-## Pager Controller
-TODO
+}
 
-## Videos helpers 
-TODO
+//Register
+tableView.x_registerReusableCell(MyTableViewCell.self)
 
-## UICollectionView / UITableView helpers
-TODO
-
-## UI animations
-TODO
-
-## UI Objects
-TODO
+//Dequeue
+let cell: MyTableViewCell = tableView.x_dequeueReusableCell(indexPath: indexPath)
+```
 
 # Requirements
 
