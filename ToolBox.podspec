@@ -29,6 +29,8 @@ Pod::Spec.new do |s|
   
   s.platforms = { :ios => "10.0", :tvos => "10.0", :osx => "10.10" }
   
+  s.dependency 'Alamofire'
+
   # Dispatches classes according the platform
   s.osx.source_files = [
   'ToolBox/Classes/SharedPlatform/**/*'

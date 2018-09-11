@@ -20,6 +20,11 @@
     "tvos": "10.0",
     "osx": "10.10"
   },
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  },
   "osx": {
     "source_files": [
       "ToolBox/Classes/SharedPlatform/**/*"
