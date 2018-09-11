@@ -18,6 +18,8 @@
 		303B76F1E9DEF6EFE0DE5729E5FF8845 /* TBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9F65EE5383FB1FD1278A9AEC0F0FF7 /* TBRouter.swift */; };
 		3251830480657D337EA383B63F64B6B4 /* TBGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88641B82826AAE2F7F6250411A2FECF2 /* TBGradientButton.swift */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
+		375FEEEF214807B200D52C3B /* TBEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FEEEE214807B200D52C3B /* TBEnvironment.swift */; };
+		375FEEF1214807C800D52C3B /* TBEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375FEEF0214807C800D52C3B /* TBEnvironmentValues.swift */; };
 		3B3A8A0DB4645E939EC43BB443ACF340 /* TBContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB6F227F095858BA4440472C4463D5 /* TBContainer.swift */; };
 		3BD6923FBA789B2BB7E86FC716638CA0 /* TBFeatureName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA867518AD01C608C5F2091ED3CFA329 /* TBFeatureName.swift */; };
 		3DE041961E25C38B10910D8B02ECE4BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
@@ -162,6 +164,8 @@
 		33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		358C02A7924CE24FD1EADCE590E205FE /* Pods-ToolBox_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ToolBox_Tests-umbrella.h"; sourceTree = "<group>"; };
 		365CFACAAEA8538E1AA2647AEE25D55E /* Pods-ToolBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ToolBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		375FEEEE214807B200D52C3B /* TBEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBEnvironment.swift; sourceTree = "<group>"; };
+		375FEEF0214807C800D52C3B /* TBEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBEnvironmentValues.swift; sourceTree = "<group>"; };
 		37985B8AB468511A0DAA76CB8AD85033 /* UIView+NSLayoutAnchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutAnchor.swift"; sourceTree = "<group>"; };
 		38FB6F227F095858BA4440472C4463D5 /* TBContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBContainer.swift; sourceTree = "<group>"; };
 		3CE7EFD25C4157E3C6C917383EB892AD /* TBOS+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TBOS+iOS.swift"; sourceTree = "<group>"; };
@@ -447,6 +451,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		375FEEED214807A000D52C3B /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				375FEEEE214807B200D52C3B /* TBEnvironment.swift */,
+				375FEEF0214807C800D52C3B /* TBEnvironmentValues.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		3BA491FF1EDEF60DBE4A825AC5482621 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +609,7 @@
 				38FB6F227F095858BA4440472C4463D5 /* TBContainer.swift */,
 				157017D9711739084D70E8A38CD2AC55 /* TBOS.swift */,
 				93F36869D01E3F5AFA6917E49D1DE0F2 /* TBPrint.swift */,
+				375FEEED214807A000D52C3B /* Environment */,
 				1FF0626F44668DFADFA3A78808F0F208 /* Feature */,
 				A967B909CA561514E5CEF628BA7C78FB /* Networker */,
 				197D547AB3859D9E48AD39CB5667DF69 /* Services */,
@@ -909,6 +923,7 @@
 				3B3A8A0DB4645E939EC43BB443ACF340 /* TBContainer.swift in Sources */,
 				FB070D04681C95B98CA8F3197F12EA72 /* TBEnums+Alamofire.swift in Sources */,
 				DE6EAA2F35746F593F063BF512420B5B /* TBFeature.swift in Sources */,
+				375FEEF1214807C800D52C3B /* TBEnvironmentValues.swift in Sources */,
 				3BD6923FBA789B2BB7E86FC716638CA0 /* TBFeatureName.swift in Sources */,
 				3251830480657D337EA383B63F64B6B4 /* TBGradientButton.swift in Sources */,
 				85598DC2E2E75B4BC986AEB215F1BD8C /* TBGradientView.swift in Sources */,
@@ -932,6 +947,7 @@
 				303B76F1E9DEF6EFE0DE5729E5FF8845 /* TBRouter.swift in Sources */,
 				7D2CD210EC0676F419288ED0982192A0 /* TBServiceProtocol.swift in Sources */,
 				72160574B367C3E337B24CD4CCF92727 /* TBServices.swift in Sources */,
+				375FEEEF214807B200D52C3B /* TBEnvironment.swift in Sources */,
 				D7FEC4E45B49F469A7FC02411E2E7DE3 /* TBShimmeringImageView.swift in Sources */,
 				C45A95910C7B63E60A5790B56194B393 /* TBShimmeringViewProtocol.swift in Sources */,
 				D87D6FCE99C68A4F0860CA5127895D5D /* TBTabbarViewController.swift in Sources */,
