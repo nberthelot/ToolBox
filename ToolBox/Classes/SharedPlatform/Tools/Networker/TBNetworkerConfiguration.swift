@@ -7,10 +7,10 @@
 
 import Foundation
 
-public class TBNetworkerConfiguration {
+open class TBNetworkerConfiguration {
   
-  var hostPath: String?
-  var headers = [String: String]()
+  open var hostPath: String?
+  open var headers = [String: String]()
 
   public init() { }
   

@@ -7,18 +7,17 @@
 
 import Foundation
 
-
-public class TBAPISessionConfiguration {
+open class TBAPISessionConfiguration {
   
-  var baseUrl: URL
-  var headers = [String: String]()
-  var authorization: TBAuthorizationType? {
+  open var baseUrl: URL
+  open var headers = [String: String]()
+  open var authorization: TBAuthorizationType? {
     didSet {
       self.refreshAuthorizationInHeaders()
     }
   }
   
-  var userAgent: String? {
+  open var userAgent: String? {
     didSet {
       self.refreshUserAgentInHeaders()
     }

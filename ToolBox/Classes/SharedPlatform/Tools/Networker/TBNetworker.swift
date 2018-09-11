@@ -95,7 +95,6 @@ extension TBNetworker {
     return URL(string: urlString)
   }
   
-  
   private static func constructHeaders(from request: TBAPIRequestModel) -> [String: String]? {
     var headers: [String: String] = [:]
     if let serviceHeaders = request.service?.configuration.headers, serviceHeaders.isEmpty == false {

@@ -7,18 +7,18 @@
 
 import Foundation
 
-public class TBAPIRequestModel {
+open class TBAPIRequestModel {
   
   weak var service: TBAPISession?
-  var parameters: [String: Any]? = nil
+  open var parameters: [String: Any]? = nil
 
-  var baseURL: URL? { return nil }
-  var path: String? { return nil }
-  var method: TBHTTPMethod { return .get }
-  var encoding: TBRequestEncoding { return .json }
-  var responseEncoding: TBResponseEncoding { return .json }
-  var headers: [String: String] { return [String: String]() }
-  var canRefreshSession: Bool = true
+  open var baseURL: URL? { return nil }
+  open var path: String? { return nil }
+  open var method: TBHTTPMethod { return .get }
+  open var encoding: TBRequestEncoding { return .json }
+  open var responseEncoding: TBResponseEncoding { return .json }
+  open var headers: [String: String] { return [String: String]() }
+  open var canRefreshSession: Bool = true
     
   public init(service: TBAPISession?) {
     self.service = service

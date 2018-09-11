@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TBAPISession {
+open class TBAPISession {
   
   public var configuration: TBAPISessionConfiguration
   public weak var delegate: TBAPISessionDelegate?
