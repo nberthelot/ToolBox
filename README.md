@@ -1,9 +1,9 @@
 # ToolBox
-[![Build Status](https://api.travis-ci.org/nberthelot/Toolbox.svg?branch=master)](https://travis-ci.org/nberthelot/ToolBox)
+
+[![Build Status](https://travis-ci.org/nberthelot/ToolBox.svg?branch=master)](https://travis-ci.org/nberthelot/ToolBox)
 [![Version](https://img.shields.io/cocoapods/v/ToolBox.svg?style=flat)](https://cocoapods.org/pods/ToolBox)
 [![License](https://img.shields.io/cocoapods/l/ToolBox.svg?style=flat)](https://cocoapods.org/pods/ToolBox)
 [![Platform](https://img.shields.io/cocoapods/p/ToolBox.svg?style=flat)](https://cocoapods.org/pods/ToolBox)
-
 
 ToolBox is a toolbox ;) library written in Swift.
 

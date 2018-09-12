@@ -8,6 +8,7 @@
 import Foundation
 
 public struct TBEnvironmentValues<T> {
+  
   private var values = [String: T]()
   
   public init(_ envs: (TBEnvironment.Name, T)...) {
@@ -18,11 +19,11 @@ public struct TBEnvironmentValues<T> {
     self.values = values
   }
   
-  public func value(for environmentType: TBEnvironment.Name) -> T {
+  public func unwrappedValue(for environmentType: TBEnvironment.Name) -> T {
     return values[environmentType.rawValue]!
   }
   
-  public func optionalValue(for environmentType: TBEnvironment.Name) -> T? {
+  public func value(for environmentType: TBEnvironment.Name) -> T? {
     return values[environmentType.rawValue]
   }
   

@@ -25,7 +25,7 @@ class TestRouteViewController2: UIViewController, TBRoutable {
 class RouterTests: XCTestCase {
   
   func testRouter() {
-    if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
+    if let url = Bundle.main.url(forResource: "RoutesTests", withExtension: "json") {
       TBRouter.loadRoutes(from: url)
     }
     else {
