@@ -16,7 +16,7 @@ ToolBox is a toolbox ;) library written in Swift.
   - [Printer](#printer)
   - [TBReusable](#tbreusable)
   - [Other](#other)
-- [Example](#Example)
+- [Example](#example)
 - [Requirements](#requirements)
 - [Author](#Author)
 

@@ -2,7 +2,9 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'ToolBox_Example' do
-  pod 'ToolBox', :path => '../'  
+  pod 'ToolBox', :path => '../'
+  pod 'Alamofire', '~> 4.7'
+
   target 'ToolBox_Tests' do
     inherit! :search_paths
 
