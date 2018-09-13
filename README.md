@@ -175,7 +175,17 @@ tbPrint("message", category: .ui)
 tbDebugPrint("message", category: .ui)
 ```
 
-Categories are :
+To create a new category, just add:
+```swift
+extension TBPrint.Category {
+  static let foo = TBPrint.Category("foo")
+}
+
+tbPrint("message", category: .foo)
+```
+
+
+Default Categories are :
 * `network`
 * `database`
 * `data`
@@ -183,11 +193,15 @@ Categories are :
 * `service`
 * `ui`
 * `none`
+* `all`
 
 You can select which categories are logged:
 
 ```swift
 TBPrint.categories = [PrintCategory.ui, PrintCategory.file]
+//or
+TBPrint.categories = [PrintCategory.all]
+
 ```
 
 
