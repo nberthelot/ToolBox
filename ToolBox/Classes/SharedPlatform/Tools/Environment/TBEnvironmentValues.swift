@@ -11,7 +11,7 @@ public struct TBEnvironmentValues<T> {
   
   private var values = [String: T]()
   
-  public init(_ envs: (TBEnvironment.Name, T)...) {
+  public init(_ envs: (TBEnvironment, T)...) {
     var values = [String: T]()
     envs.forEach {
       values[$0.0.rawValue] = $0.1
@@ -19,11 +19,11 @@ public struct TBEnvironmentValues<T> {
     self.values = values
   }
   
-  public func unwrappedValue(for environmentType: TBEnvironment.Name) -> T {
+  public func unwrappedValue(for environmentType: TBEnvironment) -> T {
     return values[environmentType.rawValue]!
   }
   
-  public func value(for environmentType: TBEnvironment.Name) -> T? {
+  public func value(for environmentType: TBEnvironment) -> T? {
     return values[environmentType.rawValue]
   }
   

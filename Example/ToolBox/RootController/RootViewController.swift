@@ -9,9 +9,12 @@
 import UIKit
 import ToolBox
 
-class RootViewController: UIViewController, TBRoutable {
+class RootViewController: TBScrollViewWithHeaderViewController, TBRoutable {
   
   @IBOutlet weak var tableView: UITableView!
+  
+  override var scrollView: UIScrollView { return tableView }
+  override var headerHeight: CGFloat { return 200 }
   
   public static func loadController(with data: Any?, for route: String) -> UIViewController? {
     return self.init()
@@ -20,6 +23,11 @@ class RootViewController: UIViewController, TBRoutable {
   override func viewDidLoad() {
     super.viewDidLoad()
     prepare()
+    tableView.backgroundColor = .clear
+  }
+  
+  override func loadHeaderContainer() -> UIView {
+    return RootViewControllerHeaderView.x_loadFromNib()!
   }
   
 }
