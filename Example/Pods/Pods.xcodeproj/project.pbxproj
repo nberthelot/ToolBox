@@ -45,6 +45,7 @@
 		71D7D7747A5D72EA909D495F14E7104C /* ToolBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A83DBA7FACB5B55F0F96AB53DB65B87 /* ToolBox-dummy.m */; };
 		736ED11C214A4BF400BF847F /* TBPrintCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736ED11B214A4BF400BF847F /* TBPrintCategory.swift */; };
 		736ED11E214A550600BF847F /* TBEnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736ED11D214A550600BF847F /* TBEnvironmentSettings.swift */; };
+		736ED125214C041100BF847F /* TBScrollViewWithHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736ED124214C041100BF847F /* TBScrollViewWithHeaderViewController.swift */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 		79AD81BE6D0F5B30663ABE7E5E859951 /* TBPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9F328D62406E2FAAA29A2C3568E54 /* TBPaddedLabel.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
@@ -191,6 +192,7 @@
 		71B6C510CB9148286176E7D39C8CB84B /* CMTime+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CMTime+Tools.swift"; sourceTree = "<group>"; };
 		736ED11B214A4BF400BF847F /* TBPrintCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPrintCategory.swift; sourceTree = "<group>"; };
 		736ED11D214A550600BF847F /* TBEnvironmentSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBEnvironmentSettings.swift; sourceTree = "<group>"; };
+		736ED124214C041100BF847F /* TBScrollViewWithHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBScrollViewWithHeaderViewController.swift; sourceTree = "<group>"; };
 		74D17E24F1316158CEA1F6F9DF7BF396 /* TBAPIRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBAPIRequestModel.swift; sourceTree = "<group>"; };
 		7934A18BAA9C70A7D42A29D63936203D /* TBPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBPlayerView.swift; sourceTree = "<group>"; };
 		80C377CA19D7CAFBE848F21444F8DADB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 		360C80775A9A7C4FC28B2649D999F0D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				736ED124214C041100BF847F /* TBScrollViewWithHeaderViewController.swift */,
 				561431D66640823CE400CD5EFCFAB52A /* TBTabbarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -921,6 +924,7 @@
 				C964C30DB76193A84D39C5015D45E959 /* TBOS.swift in Sources */,
 				79AD81BE6D0F5B30663ABE7E5E859951 /* TBPaddedLabel.swift in Sources */,
 				FAF788B9158CE495FCB4263EC67E11FA /* TBPagerView.swift in Sources */,
+				736ED125214C041100BF847F /* TBScrollViewWithHeaderViewController.swift in Sources */,
 				BD4A3BB990FD96F7B23DA46B5A4ABBAB /* TBPagerViewDelegate.swift in Sources */,
 				27B94877293AEA167F37612B536FD960 /* TBPagerViewTransformer.swift in Sources */,
 				A6A12FCE95EC1D1D16999086C35C71F7 /* TBPlayerView.swift in Sources */,
