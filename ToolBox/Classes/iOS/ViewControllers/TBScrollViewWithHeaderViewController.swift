@@ -32,7 +32,7 @@ open class TBScrollViewWithHeaderViewController: UIViewController, UIScrollViewD
     headerHeightConstraint = headerContainer.heightAnchor.constraint(equalToConstant: headerHeight)
     headerHeightConstraint.isActive = true
     headerContainer.backgroundColor = .red
-    view.sendSubview(toBack: headerContainer)
+    view.sendSubviewToBack(headerContainer)
   }
   
   open func prepareScrollView() {

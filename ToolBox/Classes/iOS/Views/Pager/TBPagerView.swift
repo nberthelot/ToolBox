@@ -55,7 +55,7 @@ public class TBPagerView: UIView {
       v.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
       // set each page ouside the view by default
       transformer.applyTransform(v, progress: -1, fromPager: self, animated: false)
-      sendSubview(toBack: v)
+      sendSubviewToBack(v)
       v.tag = index
     }
     
@@ -157,7 +157,7 @@ extension TBPagerView: UIGestureRecognizerDelegate {
       return true
     }
     let velocity = panGesture.velocity(in: self)
-    return fabs(velocity.y) < fabs(velocity.x)
+    return abs(velocity.y) < abs(velocity.x)
   }
   
 }
@@ -228,7 +228,7 @@ extension TBPagerView {
     let time = autoScrollDelay
     stopTimer()
     pageScrollTimer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(self.scrollTimerDidFire) , userInfo: nil, repeats: false)
-    RunLoop.main.add(pageScrollTimer!, forMode: .commonModes)
+    RunLoop.main.add(pageScrollTimer!, forMode: RunLoop.Mode.common)
     delegate?.pagerViewTimerDidStart(pagerView: self)
   }
   

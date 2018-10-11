@@ -12,7 +12,7 @@ open class TBPaddedLabel: UILabel {
   
   override open func drawText(in rect: CGRect) {
     let padding = UIEdgeInsets(top: insets.top, left: insets.left, bottom: insets.bottom, right: insets.right)
-    super.drawText(in: UIEdgeInsetsInsetRect(rect, padding))
+    super.drawText(in: rect.inset(by: padding))
   }
   
   override open var intrinsicContentSize: CGSize {

@@ -25,7 +25,7 @@ public class TBLoopPlayer: AVPlayer {
   }
   
   @objc public func playerDidFinishPlaying(note: NSNotification) {
-    seek(to: kCMTimeZero)
+    seek(to: CMTime.zero)
     play()
   }
   
@@ -107,7 +107,7 @@ extension TBVideoLooperView {
       let generator = AVAssetImageGenerator(asset: asset)
       generator.appliesPreferredTrackTransform = true
       do {
-        let rawFrame  = try generator.copyCGImage(at: kCMTimeZero, actualTime: nil)
+        let rawFrame  = try generator.copyCGImage(at: CMTime.zero, actualTime: nil)
         let imageFrame = UIImage(cgImage: rawFrame)
         DispatchQueue.main.async { [weak self] in
           self?.image = imageFrame
