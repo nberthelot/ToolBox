@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ToolBox'
-  s.version          = '0.3.1'
+  s.version          = '0.3.2'
   s.summary          = 'ToolBox is a toolbox ;)'
   
   # This description is used to generate tags and improve search results.
@@ -27,14 +27,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/nberthelot/ToolBox.git', :tag => s.version.to_s}
   
   
-  s.platforms = { :ios => "10.0", :tvos => "10.0", :osx => "10.10" }
+  s.platforms = { :ios => "10.0", :tvos => "10.0"}
   
   s.dependency 'Alamofire'
 
   # Dispatches classes according the platform
-  s.osx.source_files = [
-  'ToolBox/Classes/SharedPlatform/**/*'
-  ]
   s.tvos.source_files = [
   'ToolBox/Classes/SharedUI/**/*',
   'ToolBox/Classes/SharedPlatform/**/*'

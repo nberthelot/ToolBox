@@ -231,7 +231,7 @@ ToolBox contains other undocumented features like:
 
 # Requirements
 
-- iOS 10.0+ / macOS 10.10+ / tvOS 10.0+
+- iOS 10.0+  / tvOS 10.0+
 - Xcode 9.4+
 - Swift 4.2+
 
