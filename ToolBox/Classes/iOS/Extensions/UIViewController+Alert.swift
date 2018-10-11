@@ -14,7 +14,7 @@ extension UIViewController {
     _ title: String,
     message: String = String(),
     buttonLabel: String,
-    style:  UIAlertActionStyle = .cancel,
+    style:  UIAlertAction.Style = .cancel,
     handler: ((UIAlertAction) -> Void)? = nil,
     completion: (() -> Void)? = nil
     ){
@@ -28,8 +28,8 @@ extension UIViewController {
     message: String = String(),
     firstButtonLabel: String,
     secondButtonLabel: String,
-    firstStyle:  UIAlertActionStyle = .destructive,
-    secondStyle:  UIAlertActionStyle = .default,
+    firstStyle:  UIAlertAction.Style = .destructive,
+    secondStyle:  UIAlertAction.Style = .default,
     firstHandler: ((UIAlertAction) -> Void)? = nil,
     secondHandler: ((UIAlertAction) -> Void)? = nil,
     completion: (() -> Void)? = nil

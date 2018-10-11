@@ -1,8 +1,8 @@
 {
   "name": "ToolBox",
-  "version": "0.1.2",
+  "version": "0.3.0",
   "summary": "ToolBox is a toolbox ;)",
-  "description": "ToolBox is a  swift toolbox",
+  "description": "ToolBox is a swift toolbox",
   "homepage": "https://github.com/nberthelot/",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/nberthelot/ToolBox.git",
-    "tag": "0.1.2"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "10.0",

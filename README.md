@@ -233,7 +233,7 @@ ToolBox contains other undocumented features like:
 
 - iOS 10.0+ / macOS 10.10+ / tvOS 10.0+
 - Xcode 9.4+
-- Swift 4.1+
+- Swift 4.2+
 
 # Example
 

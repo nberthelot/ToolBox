@@ -28,7 +28,7 @@ public final class TBGradientView: UIView {
   
   @IBInspectable public var isVertical: Bool = true
   
-  open override class var layerClass : AnyClass {
+  public override class var layerClass : AnyClass {
     return CAGradientLayer.self
   }
   

@@ -28,7 +28,7 @@ extension TBShimmeringViewProtocol where Self: UIView {
     gradientAnimation.toValue = [0.8, 0.9, 1]
     gradientAnimation.duration = 1.5
     gradientAnimation.beginTime = CACurrentMediaTime() + delay
-    gradientAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    gradientAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
     gradientAnimation.repeatCount = HUGE
     gradientLayer.add(gradientAnimation, forKey: "gradientAnimation")
   }

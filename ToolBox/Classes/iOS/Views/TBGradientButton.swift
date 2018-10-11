@@ -27,7 +27,7 @@ final class TBGradientButton: UIButton {
   
   @IBInspectable public var isVertical: Bool = true
   
-  open override class var layerClass : AnyClass {
+  public override class var layerClass : AnyClass {
     return CAGradientLayer.self
   }
   

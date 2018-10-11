@@ -11,10 +11,10 @@ import UIKit
 public extension UIViewController {
   
   public func x_add(_ childViewController: UIViewController, inContainerView container: UIView) {
-    addChildViewController(childViewController)
+    addChild(childViewController)
     container.addSubview(childViewController.view)
     childViewController.view.x_fitTo(container)
-    childViewController.didMove(toParentViewController: self)
+    childViewController.didMove(toParent: self)
   }
   
   public var x_isChildviewController: Bool {

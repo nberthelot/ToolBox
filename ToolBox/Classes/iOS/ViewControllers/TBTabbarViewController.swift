@@ -215,18 +215,18 @@ extension TBTabbarViewController {
   
   fileprivate func add(_ childViewController: UIViewController, inContainerView container: UIView) {
     remove(childViewController, fromContainerView: container, removeView: true)
-    addChildViewController(childViewController)
+    addChild(childViewController)
     container.addSubview(childViewController.view)
     childViewController.view.x_fitTo(container)
-    childViewController.didMove(toParentViewController: self)
+    childViewController.didMove(toParent: self)
   }
   
   fileprivate func remove(_ childViewController: UIViewController, fromContainerView container: UIView, removeView: Bool) {
-    childViewController.removeFromParentViewController()
+    childViewController.removeFromParent()
     if removeView {
       childViewController.view.removeFromSuperview()
     }
-    childViewController.didMove(toParentViewController: nil)
+    childViewController.didMove(toParent: nil)
   }
   
 }
