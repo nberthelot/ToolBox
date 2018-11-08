@@ -41,7 +41,6 @@
 		61D5BC2424F285FFB07E60144560F3D5 /* TBNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6D3DEA6906F0D711DFE46717DAB89 /* TBNibLoadable.swift */; };
 		6699ADC296EB5ABFA33850500223DF8E /* TBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E1AB29CABF8C12CFB86203368DEAC /* TBServices.swift */; };
 		6ADBADA40058A02DBE9AC9B807A1F7A1 /* Pods-ToolBox_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 358C02A7924CE24FD1EADCE590E205FE /* Pods-ToolBox_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B99EA0616184BFA14CC300C82FD6490 /* MGLoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74519ED7E02309C889C667DA4F0AA65F /* MGLoggerService.swift */; };
 		6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
 		6F38751DA57825A144E7A61DB8D1EFEE /* TBPagerViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE61FD244E1840C01AABD2F55062B638 /* TBPagerViewTransformer.swift */; };
 		7068E8A7DDC1424EE8F24BC77E8746F4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
@@ -60,6 +59,9 @@
 		99A51473B9AEFF2DB3A96E28A13BB1D2 /* UIViewController+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554E26E01745416354DDA6C39E650BD /* UIViewController+Router.swift */; };
 		9ABBC5E57A86F25C3B62E12F7D010974 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947FE160F26BF300D0F4394C7345870 /* UITableView+Reusable.swift */; };
 		9AC11CBB0A0E5F1D4D88526646BC1A7D /* TBPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994E91B1E6E81FC4EAEEDAC757267E2 /* TBPrint.swift */; };
+		9B33C7D6219493C00001741E /* TBServicePriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33C7D5219493C00001741E /* TBServicePriority.swift */; };
+		9B33C7D8219493F40001741E /* TBServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33C7D7219493F40001741E /* TBServiceDefinition.swift */; };
+		9B33C7DA2194A68E0001741E /* TBBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33C7D92194A68E0001741E /* TBBaseService.swift */; };
 		9D3EA45BD2A21B2AF5484595CD70D15D /* TBPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05785C0F1F1076CBB5C0F951EB06084D /* TBPlayerView.swift */; };
 		A2F8E39792C16E13F3AF6724CAFF43DE /* TBPagerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509DAF2CCAFEEFA00EBF27058716EDA /* TBPagerViewDelegate.swift */; };
 		AC7A88540956307527916B5D85DBDA5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23B3260E70D1B3A7B5E759A4A683949 /* Foundation.framework */; };
@@ -83,7 +85,6 @@
 		D4C3899574E9D5DF5E5DA52310560BCC /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */; };
 		D8EC5B74B9B5DC842F4179D19E6DE6D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23B3260E70D1B3A7B5E759A4A683949 /* Foundation.framework */; };
 		DBE6E2E4D205545E7988CFA5057C31D6 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */; };
-		DEB9B6EC4655B80A07A8E52584B689BD /* MGLoggerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB84383224275CCE944DA916079D6AC /* MGLoggerServiceProtocol.swift */; };
 		E97CD6E702334B3528AF21313598DA04 /* TBRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252F1740FCF3679930DB63748C2D0FC /* TBRoutable.swift */; };
 		E994D3A7A62D390E3D79E53F8D01D959 /* TBAPISessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83484BBAA5BA87EC276412BBC21A428 /* TBAPISessionDelegate.swift */; };
 		EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,7 +147,6 @@
 		195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		1A3C8C4551179FA507EC7C83B203E5AF /* TBAPIRequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBAPIRequestModel.swift; sourceTree = "<group>"; };
 		1AED5AC2A8095757F7EBA3C45EC4EEDB /* Pods-ToolBox_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ToolBox_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1CB84383224275CCE944DA916079D6AC /* MGLoggerServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerServiceProtocol.swift; sourceTree = "<group>"; };
 		1D0C7E54A0397E657B778BBC9C8F8947 /* Pods-ToolBox_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToolBox_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1D252600D5E95C76CDA1D9B309B65F0D /* UIColor+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Tools.swift"; sourceTree = "<group>"; };
 		1E230A0448B394DE26E688DAC8E6201E /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
@@ -190,7 +190,6 @@
 		6D3A363E54334AE0E523485B5DE29D80 /* TBEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBEnvironment.swift; sourceTree = "<group>"; };
 		6D444B1F1ED0B36E665888809651E35B /* Pods-ToolBox_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ToolBox_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		706C7AFFE37BA158C3553250F4B5FAED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74519ED7E02309C889C667DA4F0AA65F /* MGLoggerService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MGLoggerService.swift; sourceTree = "<group>"; };
 		7C013394329D1C07AC7005376A3D38FE /* TBScrollViewWithHeaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBScrollViewWithHeaderViewController.swift; sourceTree = "<group>"; };
 		80C377CA19D7CAFBE848F21444F8DADB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80DDAD4A3D1DB1FAED11AF86112C55A9 /* TBEnvironmentValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TBEnvironmentValues.swift; sourceTree = "<group>"; };
@@ -201,6 +200,9 @@
 		8CE1DC6F186284ADEF2E5A7974BD2D47 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94975C2F1755C6EE98017F1831D57E0C /* Pods-ToolBox_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ToolBox_Example.modulemap"; sourceTree = "<group>"; };
+		9B33C7D5219493C00001741E /* TBServicePriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBServicePriority.swift; sourceTree = "<group>"; };
+		9B33C7D7219493F40001741E /* TBServiceDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBServiceDefinition.swift; sourceTree = "<group>"; };
+		9B33C7D92194A68E0001741E /* TBBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBaseService.swift; sourceTree = "<group>"; };
 		9D2B130E1E77BAE4254B569737AEDABB /* Pods-ToolBox_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ToolBox_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		A0428C2A95EF978C7FDFA2F373915E95 /* ToolBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ToolBox.modulemap; sourceTree = "<group>"; };
@@ -561,15 +563,6 @@
 			path = Transformers;
 			sourceTree = "<group>";
 		};
-		6ECB4973E51ED12DBF4737970663545C /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				74519ED7E02309C889C667DA4F0AA65F /* MGLoggerService.swift */,
-				1CB84383224275CCE944DA916079D6AC /* MGLoggerServiceProtocol.swift */,
-			);
-			path = Logger;
-			sourceTree = "<group>";
-		};
 		703942F2AAB2310051ECCB02394086F0 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,18 +724,12 @@
 			isa = PBXGroup;
 			children = (
 				2D6E1AB29CABF8C12CFB86203368DEAC /* TBServices.swift */,
-				F3A6B20FFDBBE464795F0847864BD8A2 /* Service */,
+				9B33C7D5219493C00001741E /* TBServicePriority.swift */,
+				9B33C7D7219493F40001741E /* TBServiceDefinition.swift */,
+				FEC3F89D3A869BF3DA8609EC92C12EB9 /* TBServiceProtocol.swift */,
+				9B33C7D92194A68E0001741E /* TBBaseService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		F3A6B20FFDBBE464795F0847864BD8A2 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				FEC3F89D3A869BF3DA8609EC92C12EB9 /* TBServiceProtocol.swift */,
-				6ECB4973E51ED12DBF4737970663545C /* Logger */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -972,9 +959,8 @@
 				0672E1C7BC6AEBA37A19B57575884B9C /* Float+Tools.swift in Sources */,
 				C96F8A0958D0F7A26AB5704A5511E68C /* Int+Tools.swift in Sources */,
 				BE0942B937231846BC8F576D80B376DE /* ISO8601+Tools.swift in Sources */,
-				6B99EA0616184BFA14CC300C82FD6490 /* MGLoggerService.swift in Sources */,
-				DEB9B6EC4655B80A07A8E52584B689BD /* MGLoggerServiceProtocol.swift in Sources */,
 				2F9F05FF30291E4896AF81DC89C0C45E /* String+Tools.swift in Sources */,
+				9B33C7DA2194A68E0001741E /* TBBaseService.swift in Sources */,
 				55FCA000D302070F6AF622474E9916FE /* TBAPIModelProtocol.swift in Sources */,
 				F9A3EE2735DAFDEFB205ED9FB8D57BE2 /* TBAPIRequestModel.swift in Sources */,
 				5EE764944B1EA9332E25CE5E5EAF1575 /* TBAPISession.swift in Sources */,
@@ -1009,11 +995,13 @@
 				E97CD6E702334B3528AF21313598DA04 /* TBRoutable.swift in Sources */,
 				F9515C79CBCB8D43E0676BC2C5CBB4E6 /* TBRouter.swift in Sources */,
 				B5BC14EFD5382F9BBD1E26726CA0CB10 /* TBScrollViewWithHeaderViewController.swift in Sources */,
+				9B33C7D8219493F40001741E /* TBServiceDefinition.swift in Sources */,
 				D37815622A1E3FCC0495DB9C2B97D963 /* TBServiceProtocol.swift in Sources */,
 				6699ADC296EB5ABFA33850500223DF8E /* TBServices.swift in Sources */,
 				77F352D18D8FD3EE4314211A17CC5828 /* TBShimmeringImageView.swift in Sources */,
 				92B65B1A8F05CCD682BD6679041475F8 /* TBShimmeringViewProtocol.swift in Sources */,
 				C86F52E94787303635F7E38A6E0E5E82 /* TBTabbarViewController.swift in Sources */,
+				9B33C7D6219493C00001741E /* TBServicePriority.swift in Sources */,
 				3498C7C07309412B331F58E71831FF91 /* TBVideoLooperView.swift in Sources */,
 				EF6AA9A298C786BFE3D78DB178A290C6 /* ToolBox-dummy.m in Sources */,
 				CB36A3EC03D36A68CEC3477CEAD734A6 /* UICollectionView+Reusable.swift in Sources */,

@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol TBServiceProtocol {
-  static func loadService() -> Self
+  static func loadService(dependencies: DependencyInjectionSequence?) -> Self
+  init()
 }
-

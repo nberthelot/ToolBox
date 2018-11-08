@@ -22,6 +22,14 @@ public struct TBRouter {
     return routable?.loadController(with: data, for: route)
   }
   
+  public static func route(route: TBRouter.Route, with data: Any?) -> UIViewController? {
+    return self.route(route.rawValue, with: data)
+  }
+  
+  public static func remove(route: TBRouter.Route) {
+    TBContainer<TBRoutable.Type>.removeValue(for: route.rawValue)
+  }
+  
 }
 
 // MARK: - CONFIGURATION
@@ -69,4 +77,21 @@ extension TBRouter {
   
 }
 
-
+// MARK: - CONFIGURATION
+public extension TBRouter {
+  
+  public struct Route: Hashable, Equatable, RawRepresentable {
+    
+    public var rawValue: String
+    
+    public init?(rawValue: String) {
+      self.rawValue = rawValue
+    }
+    
+    public init(_ rawValue: String) {
+      self.rawValue = rawValue
+    }
+    
+  }
+  
+}
