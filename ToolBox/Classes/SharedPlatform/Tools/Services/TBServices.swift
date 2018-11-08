@@ -7,11 +7,11 @@
 
 import Foundation
 
-public typealias DependencyDefinition = (`protocol`: Any.Type, serviceType: Any.Type?)
+public typealias DependencyType = Any.Type
+public typealias DependencyDefinition = (`protocol`: DependencyType, serviceType: Any.Type?)
 public typealias DependencySequence = [DependencyDefinition]
-
-public typealias DependencyInjection = (`protocol`: Any.Type, service: TBServiceProtocol)
-public typealias DependencyInjectionSequence = [(`protocol`: Any.Type, service: TBServiceProtocol)]
+public typealias DependencyInjection = (`protocol`: DependencyType, service: TBServiceProtocol)
+public typealias DependencyInjectionSequence = [(`protocol`: DependencyType, service: TBServiceProtocol)]
 
 
 open class TBServices {
@@ -39,7 +39,7 @@ extension TBServices {
   public static func add<T>(_ serviceType : TBServiceProtocol.Type,
                             for protocol: T.Type,
                             priority: TBServicePriority = .high,
-                            dependencies: [Any.Type]) {
+                            dependencies: [DependencyType]) {
     var dep = DependencySequence()
     dependencies.forEach {
       dep.append((protocol: $0, serviceType: nil))
