@@ -46,15 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       TBRouter.loadRoutes(from: url)
     }
     
-    TBServices.add(ServiceUser.self,  for: ServiceUserProtocol.self, dependencies: nil)
-    TBServices.add(ServiceUser2.self, for: ServiceUserProtocol.self, priority: .low)
+    TBServices.add(ServiceUser.self,  for: ServiceUserProtocol.self)
+    TBServices.add(ServiceUser2.self, for: ServiceUserProtocol.self, priority: .custom(200))
+    TBServices.add(ServiceSocial.self, for: ServiceSocialProtocol.self, dependencies: [ServiceUserProtocol.self])
 
-    TBServices.add(ServiceSocial.self,
-                   for: ServiceSocialProtocol.self,
-                   dependencies: [(protocol: ServiceUserProtocol.self, serviceType: ServiceUser2.self)])
-
-    print(TBServices.retrieve(type: ServiceSocialProtocol.self).userName) // => TOM (UserServiceService 2)
-    print(TBServices.retrieve(type: ServiceUserProtocol.self).name) // NIcolas (serviceUser1
+    print(TBServices.retrieve(type: ServiceSocialProtocol.self).userName)
+    print(TBServices.retrieve(type: ServiceUserProtocol.self).name)
     
     return true
   }

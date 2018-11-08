@@ -36,6 +36,17 @@ extension TBServices {
     instance.services[key] = sort(servicesDefinition: serviceDefinitions)
   }
   
+  public static func add<T>(_ serviceType : TBServiceProtocol.Type,
+                            for protocol: T.Type,
+                            priority: TBServicePriority = .high,
+                            dependencies: [Any.Type]) {
+    var dep = DependencySequence()
+    dependencies.forEach {
+      dep.append((protocol: $0, serviceType: nil))
+    }
+    add(serviceType, for: `protocol`, priority: priority, dependencies: dep)
+  }
+  
 }
 
 // MARK: RETREIVE
@@ -51,11 +62,21 @@ extension TBServices {
   
   private static func load(serviceDefinition: TBServiceDefinition) -> TBServiceProtocol? {
     let dependencies: DependencyInjectionSequence? = serviceDefinition.dependencies?.compactMap { dependency in
-      let serivceType = dependency.serviceType
+      
       let dependencyKey = keyFor(type: dependency.protocol.self)
-      for def in instance.services[dependencyKey]! {
-        if def.serviceType == serivceType, let srv = load(serviceDefinition: def) {
-          return (protocol: dependency.protocol, service: srv)
+      if let services = instance.services[dependencyKey] {
+        
+        guard let serviceType = dependency.serviceType else {
+          if let def = services.last, let srv = load(serviceDefinition: def)  {
+            return (protocol: dependency.protocol, service: srv)
+          }
+          return nil
+        }
+        
+        for def in services {
+          if def.serviceType == serviceType, let srv = load(serviceDefinition: def) {
+            return (protocol: dependency.protocol, service: srv)
+          }
         }
       }
       return nil
