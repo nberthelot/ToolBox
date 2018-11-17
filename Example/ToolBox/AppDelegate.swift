@@ -8,7 +8,7 @@
 
 import UIKit
 import ToolBox
-
+//JUSTE TEST: CLEAN IT
 // MARK: PROTOCOL
 protocol ServiceUserProtocol: TBServiceProtocol {
   var name: String { get }
@@ -35,6 +35,10 @@ final class ServiceSocial: TBBaseService, ServiceSocialProtocol {
   
 }
 
+extension TBRouter.Route {
+  static let tabbar = TBRouter.Route("tabbar")
+  static let featureFlipping = TBRouter.Route("featureFlipping")
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -9,6 +9,8 @@
 import UIKit
 import ToolBox
 
+
+
 class RootViewController: TBScrollViewWithHeaderViewController, TBRoutable {
   
   @IBOutlet weak var tableView: UITableView!
@@ -63,9 +65,9 @@ extension RootViewController: UITableViewDelegate {
     guard let exampleType = ExampleType(rawValue: indexPath.row) else { return }
     switch exampleType {
     case .tabbar:
-      x_performRoute("tabbar", presentationType: .modal)
+      x_performRoute(.tabbar, presentationType: .modal)
     case .featureFlipping:
-      x_performRoute("featureFlipping", presentationType: .modal)
+      x_performRoute(.featureFlipping, presentationType: .modal)
     case .count: break
     }
   }
