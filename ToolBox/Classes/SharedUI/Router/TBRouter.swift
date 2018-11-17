@@ -8,25 +8,21 @@
 import Foundation
 
 public struct TBRouter {
-  
-  public static func addRoute(_ route: String, routableClass: TBRoutable.Type) {
-    TBContainer.add(routableClass, for: route)
+
+  public static func addRoute(_ route: Route, routableClass: TBRoutable.Type) {
+    TBContainer.add(routableClass, for: route.rawValue)
   }
   
-  public static func remove(_ route: String) {
-    TBContainer<TBRoutable.Type>.removeValue(for: route)
+  public static func remove(_ route: Route) {
+    TBContainer<TBRoutable.Type>.removeValue(for: route.rawValue)
   }
   
-  public static func route(_ route: String, with data: Any?) -> UIViewController? {
-    let routable: TBRoutable.Type? = TBContainer.getValue(for: route)
-    return routable?.loadController(with: data, for: route)
+  public static func route(_ route: Route, with data: Any?) -> UIViewController? {
+    let routable: TBRoutable.Type? = TBContainer.getValue(for: route.rawValue)
+    return routable?.loadController(with: data, for: route.rawValue)
   }
   
-  public static func route(route: TBRouter.Route, with data: Any?) -> UIViewController? {
-    return self.route(route.rawValue, with: data)
-  }
-  
-  public static func remove(route: TBRouter.Route) {
+  public static func remove(route: Route) {
     TBContainer<TBRoutable.Type>.removeValue(for: route.rawValue)
   }
   
@@ -57,16 +53,16 @@ extension TBRouter {
   fileprivate static func addRoutes(from data: [String: [String: Any]]?) -> Bool {
     guard let routesInfos = data else { return false }
     
-    for (route, infos) in routesInfos {
+    for (routeRawValue, infos) in routesInfos {
       guard let className = infos["class"] else {
         return false
       }
       let bundleName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? ""
       if let routableClass = NSClassFromString("\(bundleName).\(className)") as? TBRoutable.Type {
-        TBRouter.addRoute(route, routableClass: routableClass)
+        TBRouter.addRoute(Route(routeRawValue), routableClass: routableClass)
       }
       else if let routableClass = NSClassFromString("\(className)") as? TBRoutable.Type {
-        TBRouter.addRoute(route, routableClass: routableClass)
+        TBRouter.addRoute(Route(routeRawValue), routableClass: routableClass)
       }
       else {
         tbPrint("[TBROUTER] Fail to add route \(route) with infos: \(infos)", category: .ui)

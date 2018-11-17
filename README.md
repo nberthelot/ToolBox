@@ -39,7 +39,9 @@ public protocol TBRoutable: class {
   static func loadController(with data: Any?, for route: String) -> UIViewController?
 }
 ```
-Example:
+
+The TBRoutable protocol has a default implementation that just returns the designated initializer. If you need more control on initialization you can override it.
+
 ```swift
 class HomeViewController: UIViewController, TBRoutable {
   public static func loadController(with data: Any?, for route: String) -> UIViewController? {
@@ -51,10 +53,17 @@ class HomeViewController: UIViewController, TBRoutable {
 
 Routes can be added manually:
 
+
+
+
 ```swift
-TBRouter.addRoute("home", routableClass: HomeViewController.self)
+extension TBRouter.Route {
+  static let home = TBRouter.Route("home")
+}
+
+TBRouter.addRoute(.home, routableClass: HomeViewController.self)
 ```
-Or with local or remote router file (JSON):
+Or from a local or a remote routes file (JSON):
 *Routes.json*
 ```json
 {
@@ -72,14 +81,14 @@ if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
 
 To perform a route just call `x_performRoute` from `UIViewController`:
 ```swift
-x_performRoute("home", presentationType: .push)
+x_performRoute(.home, presentationType: .push)
 //or
-x_performRoute("home", presentationType: .modal, data: someData, animated: true)
+x_performRoute(.home, presentationType: .modal, data: someData, animated: true)
 ```
 
 Or just get the route's controller and perform a presentation programmatically:
 ```swift
-let homeController = TBRouter.route("home", with: someData)
+let homeController = TBRouter.route(.home, with: someData)
 ```
 
 ## Container

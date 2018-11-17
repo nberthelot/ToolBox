@@ -13,4 +13,10 @@ public protocol TBRoutable: class {
   
 }
 
+public extension TBRoutable where Self: UIViewController {
+  
+  static func loadController(with data: Any?, for route: String) -> UIViewController? {
+    return self.init()
+  }
 
+}
