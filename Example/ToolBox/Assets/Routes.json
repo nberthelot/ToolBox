@@ -1,7 +1,5 @@
 {
-  "tabbar": {
-    "class" : "TabbarViewController"
-  },
+  "tabbar":  "TabbarViewController",
   
   "featureFlipping": {
     "class" : "FeatureFlippingViewController"

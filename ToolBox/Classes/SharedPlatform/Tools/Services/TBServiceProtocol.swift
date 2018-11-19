@@ -13,23 +13,15 @@ public protocol TBServiceProtocol {
   init()
 }
 
+public protocol TBSValidateServiceDependencies {
+  static var mandatoryServices: [DependencyType] { get }
+}
 
-extension UIViewController {
+public extension TBSValidateServiceDependencies {
   
-  open class var x_mandatoryServices: [DependencyType] { return [] }
-
   public static func x_validateMandatoryServices() -> Bool {
-    return TBServices.validate(dependencies: x_mandatoryServices)
+    return TBServices.validate(dependencies: mandatoryServices)
   }
   
 }
 
-extension UIView {
-  
-  open class var x_mandatoryServices: [DependencyType] { return [] }
-  
-  public static func x_validateMandatoryServices() -> Bool {
-    return TBServices.validate(dependencies: x_mandatoryServices)
-  }
-  
-}

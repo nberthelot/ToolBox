@@ -36,25 +36,25 @@ extension TBRouter {
     if asynchronous == false {
       let data = try? Data(contentsOf: url)
       let json = try? JSONSerialization.jsonObject(with: data!)
-      return TBRouter.addRoutes(from:  json as? [String: [String: Any]])
+      return TBRouter.addRoutes(from: json as? [String: Any])
     }
     else {
       DispatchQueue.global(qos: .background).async {
         let data = try? Data(contentsOf: url)
         let json = try? JSONSerialization.jsonObject(with: data!)
         DispatchQueue.main.async {
-          completion?(TBRouter.addRoutes(from:  json as? [String: [String: Any]]))
+          completion?(TBRouter.addRoutes(from: json as? [String: Any]))
         }
       }
       return true
     }
   }
   
-  fileprivate static func addRoutes(from data: [String: [String: Any]]?) -> Bool {
+  fileprivate static func addRoutes(from data: [String: Any]?) -> Bool {
     guard let routesInfos = data else { return false }
     
     for (routeRawValue, infos) in routesInfos {
-      guard let className = infos["class"] else {
+      guard let className = ((infos as? [String: Any])?["class"] ?? infos) as? String  else {
         return false
       }
       let bundleName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? ""

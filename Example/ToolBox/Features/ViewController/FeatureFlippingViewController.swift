@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 import ToolBox
 
-class FeatureFlippingViewController: UIViewController, TBRoutable {
+class FeatureFlippingViewController: UIViewController, TBRoutable, TBSValidateServiceDependencies {
+  static var mandatoryServices: [DependencyType] {
+    return []
+  }
+  
   
   @IBOutlet weak var fooStatusLabel: UILabel!
   @IBOutlet weak var barStatusLabel: UILabel!
@@ -18,6 +22,7 @@ class FeatureFlippingViewController: UIViewController, TBRoutable {
   @IBOutlet weak var barSwitch: UISwitch!
 
   public static func loadController(with data: Any?, for route: String) -> UIViewController? {
+    x_validateMandatoryServices()
     return self.init()
   }
   
