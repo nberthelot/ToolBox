@@ -26,10 +26,10 @@ extension TBServices {
 
   public static func add<T>(_ serviceType : TBServiceProtocol.Type,
                             for protocol: T.Type,
-                            priority: TBServicePriority = .high,
+                            priority: TBServicePriority = .medium,
                             dependencies: DependencySequence? = nil) {
-    
     let serviceDefinition = TBServiceDefinition(priority: priority, serviceType: serviceType, dependencies: dependencies)
+    precondition(validate(serviceDefinition: serviceDefinition), "[TBSERVICES] Fail to validate dependencies \(serviceType)")
     let key = keyFor(type: T.self)
     var serviceDefinitions = instance.services[key, default:[]]
     serviceDefinitions.append(serviceDefinition)
@@ -94,7 +94,6 @@ extension TBServices {
   
 }
 
-
 // MARK: REMOVE
 extension TBServices {
 
@@ -117,6 +116,20 @@ extension TBServices {
     return servicesDefinition.sorted {
      return $0.priority < $1.priority
     }
+  }
+  
+  private static func validate(serviceDefinition: TBServiceDefinition) -> Bool {
+    return validate(dependencies: serviceDefinition.serviceType.mandatoryDependencies)
+  }
+  
+  static func validate(dependencies: [DependencyType]) -> Bool {
+    for dependency in dependencies{
+      let dependencyKey = keyFor(type: dependency.self)
+      guard let services = instance.services[dependencyKey], services.isEmpty == false else {
+        return false
+      }
+    }
+    return true
   }
   
 }

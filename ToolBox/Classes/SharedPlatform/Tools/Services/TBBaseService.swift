@@ -9,7 +9,9 @@ import Foundation
 
 open class TBBaseService: TBServiceProtocol {
   
-  var dependencies: DependencyInjectionSequence?
+  private var dependencies: DependencyInjectionSequence?
+  
+  open class var mandatoryDependencies: [DependencyType] { return [] }
   
   required public init() { }
   

@@ -8,37 +8,7 @@
 
 import UIKit
 import ToolBox
-//JUSTE TEST: CLEAN IT
-// MARK: PROTOCOL
-protocol ServiceUserProtocol: TBServiceProtocol {
-  var name: String { get }
-}
 
-protocol ServiceSocialProtocol: TBServiceProtocol {
-  var userName: String { get }
-}
-
-
-// SERVICES
-final class ServiceUser: TBBaseService, ServiceUserProtocol {
-  var name: String = "Nicolas"
-}
-
-final class ServiceUser2: TBBaseService, ServiceUserProtocol {
-  var name: String = "tom"
-}
-
-final class ServiceSocial: TBBaseService, ServiceSocialProtocol {
-  var userName: String {
-    return retrieveService(type: ServiceUserProtocol.self).name
-  }
-  
-}
-
-extension TBRouter.Route {
-  static let tabbar = TBRouter.Route("tabbar")
-  static let featureFlipping = TBRouter.Route("featureFlipping")
-}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -49,14 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let url = Bundle.main.url(forResource: "Routes", withExtension: "json") {
       TBRouter.loadRoutes(from: url)
     }
-    
-    TBServices.add(ServiceUser.self,  for: ServiceUserProtocol.self)
-    TBServices.add(ServiceUser2.self, for: ServiceUserProtocol.self, priority: .custom(200))
-    TBServices.add(ServiceSocial.self, for: ServiceSocialProtocol.self, dependencies: [ServiceUserProtocol.self])
-
-    print(TBServices.retrieve(type: ServiceSocialProtocol.self).userName)
-    print(TBServices.retrieve(type: ServiceUserProtocol.self).name)
-    
     return true
   }
   

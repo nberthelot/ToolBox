@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
-  - ToolBox (0.4.0):
-    - Alamofire
+  - ToolBox (0.9.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -17,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  ToolBox: e1dca6fc965ccdbe8ee92959efc6800b501136c4
+  ToolBox: d2fb3ed022fc1da896e2b41b55808dc166768a21
 
 PODFILE CHECKSUM: a015a94c06a223ff19f05f6fda7905b62641740c
 

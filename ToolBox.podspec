@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   
   s.platforms = { :ios => "10.0", :tvos => "10.0"}
   
-  s.dependency 'Alamofire'
+  #s.dependency 'Alamofire'
 
   # Dispatches classes according the platform
   s.tvos.source_files = [

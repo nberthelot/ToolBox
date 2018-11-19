@@ -34,6 +34,7 @@
 		9B3656C9216F5DD20057EC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3656C8216F5DD20057EC05 /* Assets.xcassets */; };
 		9B3656CC216F5DD20057EC05 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3656CA216F5DD20057EC05 /* MainMenu.xib */; };
 		B0B4649F0D78E1BD5A190D14 /* Pods_ToolBox_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD49BA3D314059F900ABAB66 /* Pods_ToolBox_Tests.framework */; };
+		BF9CE6AF21A2C2FD00E573E8 /* RoutesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE6AE21A2C2FD00E573E8 /* RoutesName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		9F700AE7E285A6A4A3AEEC66 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AD49BA3D314059F900ABAB66 /* Pods_ToolBox_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolBox_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9816B1F64AA39BFC6B42736 /* Pods-ToolBox_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBox_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBox_Example/Pods-ToolBox_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BF9CE6AE21A2C2FD00E573E8 /* RoutesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesName.swift; sourceTree = "<group>"; };
 		D2FBAA846DB271241AF6D869 /* Pods-ToolBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolBox_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToolBox_Example/Pods-ToolBox_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 				37CA5CF921367C0700A2D54E /* Tabbar */,
 				37CA5CFC21367C4700A2D54E /* ReusableCell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				BF9CE6AE21A2C2FD00E573E8 /* RoutesName.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -503,6 +506,7 @@
 				7328E5D8213D2236006A4D83 /* Features.swift in Sources */,
 				7328E5DB213D24BD006A4D83 /* FeatureFlippingViewController.swift in Sources */,
 				37CA5CFE21367C8300A2D54E /* ExampleTitleTableViewCell.swift in Sources */,
+				BF9CE6AF21A2C2FD00E573E8 /* RoutesName.swift in Sources */,
 				736ED12A214C049100BF847F /* RootViewControllerHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
