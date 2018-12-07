@@ -31,22 +31,10 @@ public struct TBRouter {
 // MARK: - CONFIGURATION
 extension TBRouter {
   
-  @discardableResult
-  public static func loadRoutes(from url: URL, asynchronous: Bool = false, completion: ((Bool) -> Void)? = nil) -> Bool {
-    if asynchronous == false {
-      let data = try? Data(contentsOf: url)
-      let json = try? JSONSerialization.jsonObject(with: data!)
-      return TBRouter.addRoutes(from: json as? [String: Any])
-    }
-    else {
-      DispatchQueue.global(qos: .background).async {
-        let data = try? Data(contentsOf: url)
-        let json = try? JSONSerialization.jsonObject(with: data!)
-        DispatchQueue.main.async {
-          completion?(TBRouter.addRoutes(from: json as? [String: Any]))
-        }
-      }
-      return true
+  public static func loadRoutes(from url: URL, asynchronous: Bool = false, completion: ((Bool) -> Void)? = nil)  {
+    Dictionary.x_load(from: url, asynchronous: asynchronous) { (datas: [String: Any]?) in
+      let route = TBRouter.addRoutes(from: datas)
+      completion?(route)
     }
   }
   

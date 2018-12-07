@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.7.3)
-  - ToolBox (0.9.0)
+  - Alamofire (4.8.0)
+  - ToolBox (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  ToolBox: d2fb3ed022fc1da896e2b41b55808dc166768a21
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  ToolBox: bde4384eb83f9fa91a04c7144659bcfeecfa13ef
 
 PODFILE CHECKSUM: a015a94c06a223ff19f05f6fda7905b62641740c
 

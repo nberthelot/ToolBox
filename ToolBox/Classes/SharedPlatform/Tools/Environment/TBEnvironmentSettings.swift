@@ -55,3 +55,24 @@ public extension TBEnvironmentSettings {
   }
 
 }
+
+extension TBEnvironmentSettings {
+  
+  public static func loadSettings(from url: URL, asynchronous: Bool = false, completion: ((Bool) -> Void)? = nil)  {
+    Dictionary.x_load(from: url, asynchronous: asynchronous) { (data: [String: [String: String]]?) in
+      guard let data = data else {
+        completion?(false)
+        return
+      }
+      for (key, settings) in data {
+        var envSettings = [(TBEnvironment, String)]()
+        for (env, value) in settings {
+          envSettings.append((TBEnvironment.init(env), value))
+        }
+        TBEnvironmentSettings.set(TBEnvironmentValues(array: envSettings), for: TBEnvironmentSettings.Key(key))
+      }
+      completion?(true)
+    }
+  }
+  
+}

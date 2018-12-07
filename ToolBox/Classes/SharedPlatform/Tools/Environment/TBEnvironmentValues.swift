@@ -19,6 +19,15 @@ public struct TBEnvironmentValues<T> {
     self.values = values
   }
   
+  public init(array: [(TBEnvironment, T)]) {
+    var values = [String: T]()
+    array.forEach {
+      values[$0.0.rawValue] = $0.1
+    }
+    self.values = values
+  }
+  
+  
   public func unwrappedValue(for environmentType: TBEnvironment) -> T {
     return values[environmentType.rawValue]!
   }
