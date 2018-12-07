@@ -22,7 +22,7 @@ class FeatureFlippingViewController: UIViewController, TBRoutable, TBSValidateSe
   @IBOutlet weak var barSwitch: UISwitch!
 
   public static func loadController(with data: Any?, for route: String) -> UIViewController? {
-    x_validateMandatoryServices()
+    _ = x_validateMandatoryServices()
     return self.init()
   }
   

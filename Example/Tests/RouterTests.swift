@@ -8,10 +8,12 @@
 
 import XCTest
 import ToolBox
+import SafariServices
 
 extension TBRouter.Route {
   static let testRouteViewController1 = TBRouter.Route("testRouteViewController1")
   static let testRouteViewController2 = TBRouter.Route("testRouteViewController2")
+  static let testRouteSafari1 = TBRouter.Route("testRouteSafari1")
 }
 
 class TestRouteViewController1: UIViewController, TBRoutable {
@@ -42,6 +44,7 @@ class RouterTests: XCTestCase {
     TBRouter.addRoute(.testRouteViewController2, routableClass: TestRouteViewController2.self)
     XCTAssert(TBRouter.route(.testRouteViewController1, with: nil) is TestRouteViewController1)
     XCTAssert(TBRouter.route(.testRouteViewController2, with: nil) is TestRouteViewController2)
+    XCTAssert(TBRouter.route(.testRouteSafari1, with: "https://github.com/nberthelot/ToolBox") is SFSafariViewController)
     
     TBRouter.remove(.testRouteViewController2)
     TBRouter.addRoute(.testRouteViewController2, routableClass: TestRouteViewController2.self)
