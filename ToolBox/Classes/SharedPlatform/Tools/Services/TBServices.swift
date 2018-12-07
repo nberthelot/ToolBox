@@ -102,6 +102,10 @@ extension TBServices {
     instance.services.removeValue(forKey: key)
   }
   
+  public static func clearAll(){
+    instance.services.removeAll()
+  }
+  
 }
 
 // MARK: UTILITIES
