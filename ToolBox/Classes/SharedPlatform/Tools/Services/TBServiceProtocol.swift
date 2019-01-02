@@ -13,11 +13,11 @@ public protocol TBServiceProtocol {
   init()
 }
 
-public protocol TBSValidateServiceDependencies {
+public protocol TBValidateServiceDependencies {
   static var mandatoryServices: [DependencyType] { get }
 }
 
-public extension TBSValidateServiceDependencies {
+public extension TBValidateServiceDependencies {
   
   public static func x_validateMandatoryServices() -> Bool {
     return TBServices.validate(dependencies: mandatoryServices)

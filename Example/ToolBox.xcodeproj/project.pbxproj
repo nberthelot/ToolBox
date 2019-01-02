@@ -369,7 +369,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = K55DC958HX;
+						DevelopmentTeam = 6W8D844MGY;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -444,12 +444,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ToolBox_Example/Pods-ToolBox_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ToolBox/ToolBox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ToolBox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,7 +708,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 775FD085FE9897A1012EF684 /* Pods-ToolBox_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = K55DC958HX;
+				DEVELOPMENT_TEAM = 6W8D844MGY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -733,7 +731,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A8BB8547535633E42CA012C /* Pods-ToolBox_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = K55DC958HX;
+				DEVELOPMENT_TEAM = 6W8D844MGY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
