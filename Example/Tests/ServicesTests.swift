@@ -58,8 +58,8 @@ class ServicesTests: XCTestCase {
     TBServices.add(Service2.self, for: ServiceTestProtocol.self)
     XCTAssert(TBServices.retrieve(type: ServiceTestProtocol.self).value == 2)
     
+    TBServices.add(ServiceUser2.self, for: ServiceUserProtocol.self)
     TBServices.add(ServiceUser.self,  for: ServiceUserProtocol.self, dependencies: nil)
-    TBServices.add(ServiceUser2.self, for: ServiceUserProtocol.self, priority: .low)
     
     TBServices.add(ServiceSocial.self,
                    for: ServiceSocialProtocol.self,

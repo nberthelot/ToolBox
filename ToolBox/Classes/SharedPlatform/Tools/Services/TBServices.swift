@@ -8,7 +8,7 @@
 import Foundation
 
 public typealias DependencyType = Any.Type
-public typealias DependencyDefinition = (`protocol`: DependencyType, serviceType: Any.Type?)
+public typealias DependencyDefinition = (`protocol`: DependencyType, serviceType: TBServiceProtocol.Type?)
 public typealias DependencySequence = [DependencyDefinition]
 public typealias DependencyInjection = (`protocol`: DependencyType, service: TBServiceProtocol)
 public typealias DependencyInjectionSequence = [(`protocol`: DependencyType, service: TBServiceProtocol)]
@@ -24,27 +24,25 @@ open class TBServices {
 // MARK: ADD
 extension TBServices {
 
-  public static func add<T>(_ serviceType : TBServiceProtocol.Type,
-                            for protocol: T.Type,
-                            priority: TBServicePriority = .medium,
+  public static func add(_ serviceType : TBServiceProtocol.Type,
+                            for protocol: Any.Type,
                             dependencies: DependencySequence? = nil) {
-    let serviceDefinition = TBServiceDefinition(priority: priority, serviceType: serviceType, dependencies: dependencies)
+    let serviceDefinition = TBServiceDefinition(serviceType: serviceType, dependencies: dependencies)
     precondition(validate(serviceDefinition: serviceDefinition), "[TBSERVICES] Fail to validate dependencies \(serviceType)")
-    let key = keyFor(type: T.self)
+    let key = keyFor(type: `protocol`.self)
     var serviceDefinitions = instance.services[key, default:[]]
     serviceDefinitions.append(serviceDefinition)
-    instance.services[key] = sort(servicesDefinition: serviceDefinitions)
+    instance.services[key] = serviceDefinitions
   }
   
-  public static func add<T>(_ serviceType : TBServiceProtocol.Type,
-                            for protocol: T.Type,
-                            priority: TBServicePriority = .high,
+  public static func add(_ serviceType : TBServiceProtocol.Type,
+                            for protocol: Any.Type,
                             dependencies: [DependencyType]) {
     var dep = DependencySequence()
     dependencies.forEach {
       dep.append((protocol: $0, serviceType: nil))
     }
-    add(serviceType, for: `protocol`, priority: priority, dependencies: dep)
+    add(serviceType, for: `protocol`, dependencies: dep)
   }
   
 }
@@ -62,7 +60,6 @@ extension TBServices {
   
   private static func load(serviceDefinition: TBServiceDefinition) -> TBServiceProtocol? {
     let dependencies: DependencyInjectionSequence? = serviceDefinition.dependencies?.compactMap { dependency in
-      
       let dependencyKey = keyFor(type: dependency.protocol.self)
       if let services = instance.services[dependencyKey] {
         
@@ -73,8 +70,8 @@ extension TBServices {
           return nil
         }
         
-        for def in services {
-          if def.serviceType == serviceType, let srv = load(serviceDefinition: def) {
+        for def in services where def.serviceType == serviceType {
+          if let srv = load(serviceDefinition: def) {
             return (protocol: dependency.protocol, service: srv)
           }
         }
@@ -115,12 +112,6 @@ extension TBServices {
     return String(describing: type.self)
   }
   
-  
-  private static func sort(servicesDefinition: [TBServiceDefinition]) -> [TBServiceDefinition] {
-    return servicesDefinition.sorted {
-     return $0.priority < $1.priority
-    }
-  }
   
   private static func validate(serviceDefinition: TBServiceDefinition) -> Bool {
     return validate(dependencies: serviceDefinition.serviceType.mandatoryDependencies)

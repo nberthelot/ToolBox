@@ -8,12 +8,10 @@
 import Foundation
 
 struct TBServiceDefinition {
-  let priority: TBServicePriority
   let serviceType : TBServiceProtocol.Type
   let dependencies: DependencySequence?
   
-  init(priority: TBServicePriority,  serviceType : TBServiceProtocol.Type, dependencies: DependencySequence?) {
-    self.priority = priority
+  init(serviceType : TBServiceProtocol.Type, dependencies: DependencySequence?) {
     self.serviceType = serviceType
     self.dependencies = dependencies
   }

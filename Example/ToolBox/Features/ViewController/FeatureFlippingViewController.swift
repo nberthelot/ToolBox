@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ToolBox
 
-class FeatureFlippingViewController: UIViewController, TBRoutable, TBSValidateServiceDependencies {
+class FeatureFlippingViewController: UIViewController, TBRoutable, TBValidateServiceDependencies {
   static var mandatoryServices: [DependencyType] {
     return []
   }
