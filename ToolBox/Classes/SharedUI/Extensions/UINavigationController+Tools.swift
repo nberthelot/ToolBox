@@ -10,7 +10,7 @@ import UIKit
 
 public extension UINavigationController {
   
-  public func x_pushViewController(_ viewController: UIViewController, animated: Bool, completion: (() -> Swift.Void)? = nil) {
+  func x_pushViewController(_ viewController: UIViewController, animated: Bool, completion: (() -> Swift.Void)? = nil) {
     if animated == true {
       CATransaction.begin()
       CATransaction.setCompletionBlock(completion)
@@ -23,7 +23,7 @@ public extension UINavigationController {
     }
   }
   
-  public func x_popViewController(animated: Bool, completion: (() -> Swift.Void)? = nil) -> UIViewController? {
+  func x_popViewController(animated: Bool, completion: (() -> Swift.Void)? = nil) -> UIViewController? {
     // TODO: fix it
     let viewController: UIViewController? = popViewController(animated: animated)
     completion?()

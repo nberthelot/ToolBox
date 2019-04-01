@@ -19,7 +19,7 @@ public protocol TBValidateServiceDependencies {
 
 public extension TBValidateServiceDependencies {
   
-  public static func x_validateMandatoryServices() -> Bool {
+  static func x_validateMandatoryServices() -> Bool {
     return TBServices.validate(dependencies: mandatoryServices)
   }
   

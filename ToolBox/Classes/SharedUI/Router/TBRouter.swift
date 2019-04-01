@@ -53,7 +53,7 @@ extension TBRouter {
         TBRouter.addRoute(Route(routeRawValue), routableClass: routableClass)
       }
       else {
-        tbPrint("[TBROUTER] Fail to add route \(route) with infos: \(infos)", category: .ui)
+        tbPrint("[TBROUTER] Fail to add route \(routeRawValue) with infos: \(infos)", category: .ui)
       }
     }
     return true
@@ -64,7 +64,7 @@ extension TBRouter {
 // MARK: - CONFIGURATION
 public extension TBRouter {
   
-  public struct Route: Hashable, Equatable, RawRepresentable {
+  struct Route: Hashable, Equatable, RawRepresentable {
     
     public var rawValue: String
     

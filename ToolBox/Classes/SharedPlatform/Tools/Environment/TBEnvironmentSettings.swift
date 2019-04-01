@@ -41,7 +41,7 @@ public struct TBEnvironmentSettings {
 
 public extension TBEnvironmentSettings {
   
-  public struct Key: Hashable, Equatable, RawRepresentable {
+  struct Key: Hashable, Equatable, RawRepresentable {
     
     public var rawValue: String
     

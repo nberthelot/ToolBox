@@ -23,7 +23,7 @@ extension String {
 // MARK: - FLOAT
 public extension String {
   
-  public var x_ratioFloatValue: CGFloat {
+  var x_ratioFloatValue: CGFloat {
     let ratioComporents = self.components(separatedBy: ":")
     var ratioValue = CGFloat(0)
     
@@ -50,7 +50,7 @@ extension String {
 // MARK: - TIME
 public extension String {
   
-  public func x_HHMMSSTimedStringToSecond() -> Int? {
+  func x_HHMMSSTimedStringToSecond() -> Int? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "hh:mm:ss"
     var date = dateFormatter.date(from: self)

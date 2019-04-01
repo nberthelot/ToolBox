@@ -10,19 +10,19 @@ import UIKit
 
 public extension UIViewController {
   
-  public func x_add(_ childViewController: UIViewController, inContainerView container: UIView) {
+  func x_add(_ childViewController: UIViewController, inContainerView container: UIView) {
     addChild(childViewController)
     container.addSubview(childViewController.view)
     childViewController.view.x_fitTo(container)
     childViewController.didMove(toParent: self)
   }
   
-  public var x_isChildviewController: Bool {
+  var x_isChildviewController: Bool {
     guard let parent = parent else { return false }
     return (parent as? UINavigationController) == nil
   }
   
-  public var x_isAppeared: Bool {
+  var x_isAppeared: Bool {
     return isViewLoaded == true && view.window != nil
   }
   
@@ -31,7 +31,7 @@ public extension UIViewController {
 // MARK: - PRESENT
 public extension UIViewController {
   
-  public func x_present(_ viewController: UIViewController, type: TBPresentationType, data: Any? = nil, animated flag: Bool = true) {
+  func x_present(_ viewController: UIViewController, type: TBPresentationType, data: Any? = nil, animated flag: Bool = true) {
     switch type {
     case .push:
       navigationController?.x_pushViewController(viewController, animated: flag)
@@ -45,7 +45,7 @@ public extension UIViewController {
 // MARK: DISMISS
 public extension UIViewController {
   
-  public func x_dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
+  func x_dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
     // Modal presentation
     if self.presentingViewController != nil {
       // dissmis presented controller to avoid error

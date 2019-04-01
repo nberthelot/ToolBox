@@ -24,7 +24,7 @@ public struct TBFeature {
 }
 
 // MARK: - FEATURES MANAGEMENT
-public extension TBFeature {
+extension TBFeature {
   
   private static var enabledFeatures = [TBFeature.Name: Bool]()
   

@@ -21,7 +21,7 @@ public struct TBEnvironment: Hashable, Equatable, RawRepresentable {
   
 }
 
-public extension TBEnvironment {
+extension TBEnvironment {
   public static let local = TBEnvironment("local")
   public static let dev = TBEnvironment("dev")
   public static let integration = TBEnvironment("integration")

@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
   
-  public func x_fitTo(_ view: UIView) {
+  func x_fitTo(_ view: UIView) {
     translatesAutoresizingMaskIntoConstraints = false
     topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -18,7 +18,7 @@ public extension UIView {
     widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
   }
   
-  public func x_fitToCenter(_ view: UIView, width: CGFloat, height: CGFloat) {
+  func x_fitToCenter(_ view: UIView, width: CGFloat, height: CGFloat) {
     translatesAutoresizingMaskIntoConstraints = false
     centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

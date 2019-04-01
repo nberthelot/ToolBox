@@ -23,7 +23,7 @@ public extension TBNibLoadable {
 
 public extension TBNibLoadable {
   
-  public static func x_loadFromNib(_ owner: NSObject? = nil, options: [UINib.OptionsKey : Any]? = nil) -> Self? {
+  static func x_loadFromNib(_ owner: NSObject? = nil, options: [UINib.OptionsKey : Any]? = nil) -> Self? {
     let bundle = Bundle(for: self)
     let nibIdentifier = String(describing: self)
     let view = bundle.loadNibNamed(nibIdentifier, owner: owner, options: options)?.first as? Self

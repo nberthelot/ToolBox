@@ -9,7 +9,7 @@ import Foundation
 
 public extension TBOS {
   
-  public static var iOS11IsAvailable: Bool {
+  static var iOS11IsAvailable: Bool {
     if #available(iOS 11.0, *) {
       return true
     }

@@ -14,7 +14,7 @@ public enum RLFontsError: Error {
 
 public extension UIFont {
   
-  public static func x_register(from url: URL) throws {
+  static func x_register(from url: URL) throws {
     guard let fontDataProvider = CGDataProvider(url: url as CFURL), let font = CGFont(fontDataProvider) else {
       throw RLFontsError.dynamicLoading
     }

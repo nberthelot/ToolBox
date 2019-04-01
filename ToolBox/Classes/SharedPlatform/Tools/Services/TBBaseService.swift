@@ -29,7 +29,7 @@ open class TBBaseService: TBServiceProtocol {
 
 public extension TBBaseService {
   
-  public func retrieveService<T>() -> T {
+  func retrieveService<T>() -> T {
     guard let service: T = retrieveOptionalService() else {
       precondition(false, "[TBSERVICE] dependency doesn't exist: \(String(describing: T.self))")
       fatalError()
@@ -37,7 +37,7 @@ public extension TBBaseService {
     return service
   }
   
-  public func retrieveOptionalService<T>() -> T?  {
+  func retrieveOptionalService<T>() -> T?  {
     guard let dependencies = dependencies else { return nil }
     for dependencie in dependencies {
       if dependencie.protocol is T.Type {
@@ -47,11 +47,11 @@ public extension TBBaseService {
     return nil
   }
   
-  public func retrieveService<T>(type : T.Type) -> T {
+  func retrieveService<T>(type : T.Type) -> T {
     return retrieveService()
   }
   
-  public  func retrieveOptionalService<T>(type : T.Type) -> T? {
+  func retrieveOptionalService<T>(type : T.Type) -> T? {
     return retrieveOptionalService()
   }
   

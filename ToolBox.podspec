@@ -28,7 +28,8 @@ Pod::Spec.new do |s|
   
   
   s.platforms = { :ios => "10.0", :tvos => "10.0"}
-  
+  s.swift_version = '5.0'
+
   #s.dependency 'Alamofire'
 
   # Dispatches classes according the platform

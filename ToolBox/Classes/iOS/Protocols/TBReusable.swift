@@ -13,10 +13,10 @@ public protocol TBReusable: TBNibLoadable {
 }
 
 public extension TBReusable {
-  public static var reuseIdentifier: String {
+  static var reuseIdentifier: String {
     return String(describing: self)
   }
-  public static var nib: UINib? {
+  static var nib: UINib? {
     return UINib(nibName: reuseIdentifier, bundle: Bundle(for: self))
   }
   

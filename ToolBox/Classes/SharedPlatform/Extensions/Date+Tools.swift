@@ -9,11 +9,11 @@ import Foundation
 
 public extension Date {
   
-  public var x_milliseconds: Int64 {
+  var x_milliseconds: Int64 {
     return Int64(self.timeIntervalSince1970 * Double(1_000))
   }
   
-  public static func x_from(milliseconds: Int64) -> Date {
+  static func x_from(milliseconds: Int64) -> Date {
     let timeInterval = TimeInterval(milliseconds) / TimeInterval(1_000)
     return Date(timeIntervalSince1970: timeInterval)
   }
