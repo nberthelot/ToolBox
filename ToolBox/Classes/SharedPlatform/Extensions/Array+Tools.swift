@@ -45,14 +45,14 @@ extension Array where Element: Equatable {
     
     //removeAll unused
     for (index, series) in tmpSeries.enumerated().reversed() {
-      if newSeries.index(of: series) == nil {
+      if newSeries.firstIndex(of: series) == nil {
         res.append(ArrayTransformationSteps<Element>.delete(position: index, value: series))
         tmpSeries.remove(at: index)
       }
     }
     
     for (index, series) in newSeries.enumerated() {
-      if let oldIndex = tmpSeries.index(of: series) {
+      if let oldIndex = tmpSeries.firstIndex(of: series) {
         if index != oldIndex {
           res.append(ArrayTransformationSteps<Element>.delete(position: oldIndex, value: series))
           res.append(ArrayTransformationSteps<Element>.insert(position: index, value: series))

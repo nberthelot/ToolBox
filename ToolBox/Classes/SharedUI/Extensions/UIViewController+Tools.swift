@@ -65,7 +65,7 @@ public extension UIViewController {
       // Push Presentation
     else if let navController = navigationController,
       let topController = navController.topViewController,
-      let index = navController.viewControllers.index(of: topController),
+      let index = navController.viewControllers.firstIndex(of: topController),
       index > 0 {
       // dissmis presented controller to avoid error
       presentedViewController?.x_dismiss(animated: flag, completion: nil)

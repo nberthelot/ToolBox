@@ -201,7 +201,7 @@ extension TBPagerView {
   }
   
   public func index(for view: UIView) -> Int {
-    return pages.index(of: view) ?? 0
+    return pages.firstIndex(of: view) ?? 0
   }
   
   public func page(at index: Int) -> UIView? {
