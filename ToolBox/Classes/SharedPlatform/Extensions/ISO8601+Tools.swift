@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
   
-  fileprivate static let x_iso8601DateFormatter: DateFormatter = {
+  public static let x_iso8601DateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.calendar = Calendar(identifier: .iso8601)
     formatter.locale = Locale(identifier: "en_US_POSIX")
@@ -19,7 +19,7 @@ extension Date {
     return formatter
   }()
   
-  fileprivate static let x_iso8601Formatter: DateFormatter = {
+  public static let x_iso8601Formatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.calendar = Calendar(identifier: .iso8601)
     formatter.locale = Locale(identifier: "en_US_POSIX")
