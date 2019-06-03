@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ToolBox'
-  s.version          = '1.2.2'
+  s.version          = '1.2.3'
   s.summary          = 'ToolBox is a toolbox ;)'
   
   # This description is used to generate tags and improve search results.
