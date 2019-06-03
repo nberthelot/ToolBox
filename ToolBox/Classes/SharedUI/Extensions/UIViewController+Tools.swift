@@ -46,8 +46,17 @@ public extension UIViewController {
 public extension UIViewController {
   
   func x_dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
+    // Push Presentation
+    if let navController = navigationController,
+      let topController = navController.topViewController,
+      let index = navController.viewControllers.firstIndex(of: topController),
+      index > 0 {
+      // dissmis presented controller to avoid error
+      presentedViewController?.x_dismiss(animated: flag, completion: nil)
+      _ = navController.x_popViewController(animated: flag) { completion?() }
+    }
     // Modal presentation
-    if self.presentingViewController != nil {
+    else if self.presentingViewController != nil {
       // dissmis presented controller to avoid error
       let completion = { [weak self] in
         self?.dismiss(animated: flag, completion: { completion?() })
@@ -61,15 +70,6 @@ public extension UIViewController {
       else {
         completion()
       }
-    }
-      // Push Presentation
-    else if let navController = navigationController,
-      let topController = navController.topViewController,
-      let index = navController.viewControllers.firstIndex(of: topController),
-      index > 0 {
-      // dissmis presented controller to avoid error
-      presentedViewController?.x_dismiss(animated: flag, completion: nil)
-      _ = navController.x_popViewController(animated: flag) { completion?() }
     }
   }
   
