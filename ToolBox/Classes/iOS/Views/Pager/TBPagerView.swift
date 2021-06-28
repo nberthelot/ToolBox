@@ -61,7 +61,9 @@ public class TBPagerView: UIView {
     
     setToProgress(-CGFloat(index))
     currentIndex = index
-    startTimer()
+    if pages.count > 1 {
+        startTimer()
+    }
   }
   
 }
@@ -81,6 +83,7 @@ extension TBPagerView {
 extension TBPagerView {
   
   @objc func panGestureRecognized(_ recognizer: UIPanGestureRecognizer) {
+    guard pages.count > 1 else { return }
     let translation = recognizer.translation(in: recognizer.view!.superview!)
     var progress = translation.x / frame.width
     
@@ -137,7 +140,7 @@ extension TBPagerView {
     let pagesCount = pages.count
     let localProgress = progress + CGFloat(factor)
     let progessPage = capProgess(localProgress)
-    let pageIndex =  mod((currentIndex + factor), pagesCount)
+    let pageIndex = mod((currentIndex + factor), pagesCount)
     
     let v = pages[pageIndex]
     
