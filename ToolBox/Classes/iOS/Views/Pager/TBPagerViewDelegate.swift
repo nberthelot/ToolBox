@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol TBPagerViewDelegate: class {
+public protocol TBPagerViewDelegate: AnyObject   {
   func pageViewsFor(pagerView: TBPagerView) -> [UIView]
   func pagerView(pagerView: TBPagerView, pageDidChanged index: Int, from oldIndex: Int)
   func pagerViewTimerDidStop(pagerView: TBPagerView)

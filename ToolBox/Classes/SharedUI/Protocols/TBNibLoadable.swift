@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol TBNibLoadable: class {
+public protocol TBNibLoadable: AnyObject {
   static var nibIdentifier: String { get }
   static var bundle: Bundle? { get }
 }

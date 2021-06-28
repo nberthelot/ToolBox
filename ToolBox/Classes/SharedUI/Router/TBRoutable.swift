@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol TBRoutable: class {
+public protocol TBRoutable: AnyObject {
   
   static func loadController(with data: Any?, for route: String) -> UIViewController?
   

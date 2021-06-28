@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol TBShimmeringViewProtocol: class {
+public protocol TBShimmeringViewProtocol: AnyObject {
   var gradientLayer: CAGradientLayer { get set }
 }
 
